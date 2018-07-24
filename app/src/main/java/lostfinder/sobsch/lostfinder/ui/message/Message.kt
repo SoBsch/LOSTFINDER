@@ -1,6 +1,5 @@
 package lostfinder.sobsch.lostfinder.ui.message
 
-import android.util.Log
 import lostfinder.sobsch.lostfinder.R
 import lostfinder.sobsch.lostfinder.ui.base.BaseFragment
 
@@ -11,7 +10,6 @@ class Message : BaseFragment<MessageContract.View, MessageContract.Presenter>(),
     override fun getResId(): Int = R.layout.fragment_message
 
     override fun init() {
-        Log.e("message", "message")
 
     }
 

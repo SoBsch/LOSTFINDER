@@ -6,7 +6,6 @@ import android.support.v4.view.GravityCompat
 import android.view.Menu
 import android.view.MenuItem
 import kotlinx.android.synthetic.main.main_content.*
-import kotlinx.android.synthetic.main.main_header.*
 import lostfinder.sobsch.lostfinder.R
 import lostfinder.sobsch.lostfinder.adapter.TabLayoutPageAdapter
 import lostfinder.sobsch.lostfinder.ui.base.BaseActivity
@@ -22,7 +21,8 @@ class MainActivity : BaseActivity<MainContract.View, MainContract.Presenter>(), 
 
     override fun init() {
 
-        setSupportActionBar()
+        mPresenter.setSupportActionBar(supportActionBar)        // 툴바
+
         main_navigation.setNavigationItemSelectedListener(this)
 
         setTabLayout()
@@ -41,13 +41,6 @@ class MainActivity : BaseActivity<MainContract.View, MainContract.Presenter>(), 
 
     }
 
-    // 툴바
-    private fun setSupportActionBar() {
-        setSupportActionBar(main_toolbar)
-
-        supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_menu_black_24dp)
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
-    }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
 
@@ -62,6 +55,7 @@ class MainActivity : BaseActivity<MainContract.View, MainContract.Presenter>(), 
 
     // 텝 레이아웃
     private fun setTabLayout() {
+
         main_tablayout.apply {
             addTab(this.newTab().setText("홈"))
             addTab(this.newTab().setText("메시지"))
@@ -72,6 +66,7 @@ class MainActivity : BaseActivity<MainContract.View, MainContract.Presenter>(), 
     }
 
     private fun setViewPager() {
+
         val mAdapter = TabLayoutPageAdapter(supportFragmentManager, main_tablayout.tabCount)
 
         main_viewpager.apply {

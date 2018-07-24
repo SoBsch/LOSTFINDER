@@ -10,7 +10,6 @@ import lostfinder.sobsch.lostfinder.ui.mypage.Mypage
 
 class TabLayoutPageAdapter(fm: FragmentManager?, private val tabCount: Int) : FragmentStatePagerAdapter(fm) {
 
-
     override fun getItem(position: Int): Fragment? = when (position) {
 
         0 -> Home()

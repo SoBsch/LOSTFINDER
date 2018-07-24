@@ -11,5 +11,6 @@ interface MainContract {
 
     interface Presenter : BasePresenter<View> {
 
+        fun setSupportActionBar(actionBar: android.support.v7.app.ActionBar?)
     }
 }
