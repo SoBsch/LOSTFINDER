@@ -2,4 +2,12 @@
     <string name="app_name">LOSTFINDER</string>
     <string name="drawer_open">drawer open</string>
     <string name="drawer_close">drawer close</string>
+
+    <string name="id_hint">아이디</string>
+    <string name="password_hint">비밀번호</string>
+    <string name="auto_text">자동로그인</string>
+    <string name="login">로그인</string>
+    <string name="find_id">아이디 찾기</string>
+    <string name="find_password">비밀번호 찾기</string>
+    <string name="register">간편 회원가입</string>
 </resources>
