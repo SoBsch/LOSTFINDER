@@ -47,7 +47,8 @@
             android:layout_height="match_parent"
             android:backgroundTint="@color/login_tint"
             android:hint="@string/password_hint"
-            android:inputType="text"
+            android:imeOptions="actionDone"
+            android:inputType="textPassword"
             android:textColor="@color/black"
             android:textSize="10.2sp" />
 
