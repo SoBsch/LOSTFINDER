@@ -170,7 +170,7 @@
     </android.support.design.widget.TextInputLayout>
 
     <TextView
-        android:id="@+id/register_signin_submit"
+        android:id="@+id/register_signin_address_submit"
         android:layout_width="0dp"
         android:layout_height="34.7dp"
         android:layout_marginTop="20dp"
@@ -185,7 +185,7 @@
         app:layout_constraintTop_toBottomOf="@id/register_signin_address_other_address_layer" />
 
     <TextView
-        android:id="@+id/register_signin_back"
+        android:id="@+id/register_signin_address_back"
         android:layout_width="0dp"
         android:layout_height="34.7dp"
         android:layout_marginTop="4.3dp"

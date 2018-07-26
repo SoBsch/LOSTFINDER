@@ -1,8 +1,11 @@
 package lostfinder.sobsch.lostfinder.ui.register.fragment.address
 
+import kotlinx.android.synthetic.main.register_signin_address.*
 import lostfinder.sobsch.lostfinder.R
 import lostfinder.sobsch.lostfinder.ui.base.BaseFragment
+import lostfinder.sobsch.lostfinder.ui.findAddress.FindAddressActivity
 import lostfinder.sobsch.lostfinder.ui.register.RegisterEventListenter
+import org.jetbrains.anko.support.v4.intentFor
 
 class RegisterSignInAddress : BaseFragment<RegisterSignInAddressContract.View, RegisterSignInAddressContract.Presenter>(),
         RegisterSignInAddressContract.View {
@@ -25,6 +28,9 @@ class RegisterSignInAddress : BaseFragment<RegisterSignInAddressContract.View, R
 
     override fun init() {
 
+        register_signin_address_find.setOnClickListener { context?.startActivity(intentFor<FindAddressActivity>()) }
+        register_signin_address_submit.setOnClickListener { }
+        register_signin_address_back.setOnClickListener { mCallback.popBack() }
     }
 
     override fun resume() {

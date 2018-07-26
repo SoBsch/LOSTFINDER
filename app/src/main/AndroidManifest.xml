@@ -26,6 +26,7 @@
 
         <activity android:name=".ui.register.Register" />
         <activity android:name=".ui.accentInfo.AccentInfoActivity" />
+        <activity android:name=".ui.findAddress.FindAddressActivity"/>
     </application>
 
 </manifest>
