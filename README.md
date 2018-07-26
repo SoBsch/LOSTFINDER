@@ -24,3 +24,24 @@
 ### Design Pattern
 
 * MVP Pattern
+
+
+### Class
+
+* 스플래시 `미구현`
+
+* 로그인 - Login `Activity`
+* 회원가입 - Register `FragmentActivity`
+  * `Fragment`
+  * main 
+  * accent -> `event` -> AccentInfo
+  * certification
+  * sign-in 
+  * address -> `event` -> FindAddress
+  * done
+  
+* 메인화면 - MainActivity `Activity` ( ViewPager, Tablayout)
+  * `Fragment`
+  * home 
+  * message
+  * mypage
