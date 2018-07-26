@@ -197,6 +197,6 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/register_signin_submit" />
+        app:layout_constraintTop_toBottomOf="@id/register_signin_address_submit" />
 
 </android.support.constraint.ConstraintLayout>

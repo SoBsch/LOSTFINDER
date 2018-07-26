@@ -37,6 +37,8 @@ class Register : BaseFragmentActivity<RegisterContract.View, RegisterContract.Pr
 
     override fun onSignInAddress() = mPresenter.signinAddressFragment()
 
+    override fun onRegisterDone() = mPresenter.doneFragment()
+
     override fun popBack() = mPresenter.popBackStack()
 
 }

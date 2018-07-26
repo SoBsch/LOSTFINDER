@@ -21,6 +21,7 @@ interface RegisterContract {
         fun certificationFragment() // 본인 인증
         fun signinUserFragment()    // 아이디 입력
         fun signinAddressFragment() // 주소입력
+        fun doneFragment()    // 완료
 
     }
 }

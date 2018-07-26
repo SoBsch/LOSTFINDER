@@ -29,7 +29,7 @@ class RegisterSignInAddress : BaseFragment<RegisterSignInAddressContract.View, R
     override fun init() {
 
         register_signin_address_find.setOnClickListener { context?.startActivity(intentFor<FindAddressActivity>()) }
-        register_signin_address_submit.setOnClickListener { }
+        register_signin_address_submit.setOnClickListener { mCallback.onRegisterDone() }
         register_signin_address_back.setOnClickListener { mCallback.popBack() }
     }
 

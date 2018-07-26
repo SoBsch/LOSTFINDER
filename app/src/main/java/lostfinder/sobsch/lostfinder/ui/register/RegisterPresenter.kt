@@ -6,6 +6,7 @@ import lostfinder.sobsch.lostfinder.ui.base.BasePresenterImpl
 import lostfinder.sobsch.lostfinder.ui.register.fragment.accent.RegisterAccent
 import lostfinder.sobsch.lostfinder.ui.register.fragment.address.RegisterSignInAddress
 import lostfinder.sobsch.lostfinder.ui.register.fragment.certification.RegisterCertification
+import lostfinder.sobsch.lostfinder.ui.register.fragment.done.RegisterDone
 import lostfinder.sobsch.lostfinder.ui.register.fragment.main.RegisterMain
 import lostfinder.sobsch.lostfinder.ui.register.fragment.signin.RegisterSignInUser
 
@@ -55,4 +56,10 @@ class RegisterPresenter : BasePresenterImpl<RegisterContract.View>(), RegisterCo
                 .commit()
     }
 
+    override fun doneFragment() {
+        supportFragmentMananger.beginTransaction()
+                .replace(R.id.register_container, RegisterDone())
+                .addToBackStack(null)
+                .commit()
+    }
 }
