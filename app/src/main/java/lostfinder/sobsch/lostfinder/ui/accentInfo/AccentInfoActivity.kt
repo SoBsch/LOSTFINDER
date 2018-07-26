@@ -22,6 +22,10 @@ class AccentInfoActivity : BaseActivity<AccentInfoContract.View, AccentInfoContr
     }
 
     override fun destroy() {
+        finish()
+    }
 
+    override fun onBackPressed() {
+        finish()
     }
 }
