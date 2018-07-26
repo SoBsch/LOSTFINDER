@@ -1,5 +1,7 @@
 package lostfinder.sobsch.lostfinder.ui.register.fragment.accent
 
+import android.widget.CheckBox
+import android.widget.Toast
 import kotlinx.android.synthetic.main.register_accent.*
 import lostfinder.sobsch.lostfinder.R
 import lostfinder.sobsch.lostfinder.ui.base.BaseFragment
@@ -7,11 +9,18 @@ import lostfinder.sobsch.lostfinder.ui.register.RegisterEventListenter
 
 class RegisterAccent : BaseFragment<RegisterAccentContract.View, RegisterAccentContract.Presenter>(), RegisterAccentContract.View {
 
+
     private lateinit var mCallback: RegisterEventListenter
 
     override var mPresenter: RegisterAccentContract.Presenter = RegisterAccentPresenter()
 
     override fun getResId(): Int = R.layout.register_accent
+
+    override fun serviceCheckBox(): CheckBox = register_accent_service_check
+
+    override fun privacyCheckBox(): CheckBox = register_accent_privacy_check
+
+    override fun accentAllCheckBox(): CheckBox = register_accent_all
 
     override fun attach() {
 
@@ -23,8 +32,12 @@ class RegisterAccent : BaseFragment<RegisterAccentContract.View, RegisterAccentC
     }
 
     override fun init() {
+        
+        register_accent_all.setOnClickListener { mPresenter.checkAllEvent() }
+        register_accent_privacy_check.setOnClickListener { mPresenter.checkBoxStatus() }
+        register_accent_service_check.setOnClickListener { mPresenter.checkBoxStatus() }
 
-        register_accent_submit.setOnClickListener { mCallback.onCertification() }
+        register_accent_submit.setOnClickListener { mPresenter.validateCheckedAll(mCallback) }
         register_accent_back.setOnClickListener { mCallback.popBack() }
     }
 
@@ -39,5 +52,7 @@ class RegisterAccent : BaseFragment<RegisterAccentContract.View, RegisterAccentC
     override fun stop() {
 
     }
+
+    override fun toastMessage(message: String) = Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
 
 }
