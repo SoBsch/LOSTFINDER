@@ -3,7 +3,7 @@ package lostfinder.sobsch.lostfinder.ui.register
 import lostfinder.sobsch.lostfinder.R
 import lostfinder.sobsch.lostfinder.ui.base.BaseFragmentActivity
 
-class Register : BaseFragmentActivity<RegisterContract.View, RegisterContract.Presenter>() {
+class Register : BaseFragmentActivity<RegisterContract.View, RegisterContract.Presenter>(), RegisterEventListenter {
 
     override var mPresenter: RegisterContract.Presenter = RegisterPresenter()
 
@@ -25,6 +25,8 @@ class Register : BaseFragmentActivity<RegisterContract.View, RegisterContract.Pr
 
     override fun destroy() {
     }
+
+    override fun onAccent() = mPresenter.accentFragment()
 
 
 }

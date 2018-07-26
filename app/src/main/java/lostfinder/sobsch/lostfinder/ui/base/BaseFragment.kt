@@ -16,6 +16,7 @@ abstract class BaseFragment<in V : BaseView, T : BasePresenter<V>> : Fragment(),
     override fun onAttach(context: Context?) {
         mContext = context!!
         super.onAttach(context)
+        attach()
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -58,6 +59,7 @@ abstract class BaseFragment<in V : BaseView, T : BasePresenter<V>> : Fragment(),
     abstract fun resume()
     abstract fun pause()
     abstract fun stop()
+    abstract fun attach()
 
 }
 
