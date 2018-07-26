@@ -25,5 +25,8 @@ class Message : BaseFragment<MessageContract.View, MessageContract.Presenter>(),
 
     }
 
+    override fun attach() {
+
+    }
 
 }

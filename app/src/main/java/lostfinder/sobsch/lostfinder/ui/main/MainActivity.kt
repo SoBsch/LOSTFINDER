@@ -6,6 +6,7 @@ import android.support.v4.view.GravityCompat
 import android.view.Menu
 import android.view.MenuItem
 import kotlinx.android.synthetic.main.main_content.*
+import kotlinx.android.synthetic.main.main_header.*
 import lostfinder.sobsch.lostfinder.R
 import lostfinder.sobsch.lostfinder.adapter.TabLayoutPageAdapter
 import lostfinder.sobsch.lostfinder.ui.base.BaseActivity
@@ -21,12 +22,18 @@ class MainActivity : BaseActivity<MainContract.View, MainContract.Presenter>(), 
 
     override fun init() {
 
-        mPresenter.setSupportActionBar(supportActionBar)        // 툴바
+        attachActionBar()
 
         main_navigation.setNavigationItemSelectedListener(this)
 
         setTabLayout()
         setViewPager()
+    }
+
+    private fun attachActionBar() {
+
+        setSupportActionBar(main_toolbar)
+        mPresenter.setSupportActionBar(supportActionBar)        // 툴바
     }
 
     override fun resume() {
@@ -54,15 +61,12 @@ class MainActivity : BaseActivity<MainContract.View, MainContract.Presenter>(), 
     }
 
     // 텝 레이아웃
-    private fun setTabLayout() {
-
-        main_tablayout.apply {
-            addTab(this.newTab().setText("홈"))
-            addTab(this.newTab().setText("메시지"))
-            addTab(this.newTab().setText("마이페이지"))
-            tabGravity = TabLayout.GRAVITY_FILL
-            addOnTabSelectedListener(this@MainActivity)
-        }
+    private fun setTabLayout() = main_tablayout.apply {
+        addTab(this.newTab().setText("홈"))
+        addTab(this.newTab().setText("메시지"))
+        addTab(this.newTab().setText("마이페이지"))
+        tabGravity = TabLayout.GRAVITY_FILL
+        addOnTabSelectedListener(this@MainActivity)
     }
 
     private fun setViewPager() {
