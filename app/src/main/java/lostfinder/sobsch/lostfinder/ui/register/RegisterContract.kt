@@ -18,6 +18,7 @@ interface RegisterContract {
 
         fun mainFragment()  // 첫 화면
         fun accentFragment() // 약관 동의 화면
+        fun certificationFragment() // 본인 인증
 
     }
 }

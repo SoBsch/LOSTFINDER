@@ -32,6 +32,7 @@ class Register : BaseFragmentActivity<RegisterContract.View, RegisterContract.Pr
     }
 
     override fun onAccent() = mPresenter.accentFragment()
+    override fun onCertification() = mPresenter.certificationFragment()
 
     override fun popBack() = mPresenter.popBackStack()
 

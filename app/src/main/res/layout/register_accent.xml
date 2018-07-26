@@ -124,7 +124,7 @@
         app:layout_constraintTop_toBottomOf="@id/register_accent_all" />
 
     <TextView
-        android:id="@+id/register_main_back"
+        android:id="@+id/register_accent_back"
         android:layout_width="0dp"
         android:layout_height="34.7dp"
         android:layout_marginTop="4.3dp"
