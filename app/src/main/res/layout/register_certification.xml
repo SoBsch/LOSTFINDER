@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/register_width"
+    android:layout_height="wrap_content"
+    android:background="@null">
+
+    <TextView
+        android:id="@+id/register_certification_tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:letterSpacing="-0.03"
+        android:lineSpacingExtra="4.7sp"
+        android:text="@string/register_certification_tv1"
+        android:textColor="@color/black"
+        android:textSize="12.5sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 휴대폰인증 이미지 -->
+    <!--<ImageView
+        android:id="@+id/register_certification_phone"
+        android:layout_width="97dp"
+        android:layout_height="97dp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/register_certification_tv1" />-->
+    <include
+        android:id="@+id/register_certification_phone_container"
+        layout="@layout/certification_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/register_certification_tv1" />
+
+    <View
+        android:id="@+id/register_certification_line"
+        android:layout_width="1dp"
+        android:layout_height="134.7dp"
+        android:layout_marginStart="11.3dp"
+        android:background="#999287"
+        app:layout_constraintBottom_toBottomOf="@id/register_certification_phone_container"
+        app:layout_constraintStart_toEndOf="@id/register_certification_phone_container"
+        app:layout_constraintTop_toTopOf="@id/register_certification_phone_container" />
+
+    <!--<ImageView
+        android:id="@+id/register_certification_ipin"
+        android:layout_width="97dp"
+        android:layout_height="97dp"
+        android:layout_marginStart="10.7dp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintStart_toEndOf="@id/register_certification_line"
+        app:layout_constraintTop_toBottomOf="@id/register_certification_tv1" />-->
+    <include
+        android:id="@+id/register_certification_ipin_container"
+        layout="@layout/certification_ipin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/register_certification_phone_container"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/register_certification_line"
+        app:layout_constraintTop_toTopOf="@id/register_certification_phone_container" />
+
+    <TextView
+        android:id="@+id/register_certification_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:gravity="center_horizontal"
+        android:lineSpacingExtra="6.2sp"
+        android:text="@string/register_certification_content"
+        android:textColor="#cc000000"
+        android:textSize="7.8sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/register_certification_line" />
+
+    <TextView
+        android:id="@+id/register_certification_submit"
+        android:layout_width="0dp"
+        android:layout_height="34.7dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/login_round"
+        android:gravity="center"
+        android:text="@string/register_accent_next"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/register_certification_content" />
+
+    <TextView
+        android:id="@+id/register_certification_back"
+        android:layout_width="0dp"
+        android:layout_height="34.7dp"
+        android:layout_marginTop="4.3dp"
+        android:background="@drawable/accent_back"
+        android:gravity="center"
+        android:text="@string/register_accent_back"
+        android:textColor="@color/login_tint"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/register_certification_submit" />
+
+
+</android.support.constraint.ConstraintLayout>

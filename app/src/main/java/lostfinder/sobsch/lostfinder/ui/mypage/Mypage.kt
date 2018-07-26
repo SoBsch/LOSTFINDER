@@ -25,5 +25,8 @@ class Mypage : BaseFragment<MypageContract.View, MypageContract.Presenter>(), My
 
     }
 
+    override fun attach() {
+
+    }
 
 }

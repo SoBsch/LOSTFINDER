@@ -25,5 +25,10 @@ class Home : BaseFragment<HomeContract.View, HomeContract.Presenter>(), HomeCont
 
     }
 
+    override fun attach() {
+
+    }
+
+
 
 }
