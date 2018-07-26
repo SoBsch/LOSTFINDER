@@ -26,7 +26,7 @@ class RegisterCertification : BaseFragment<RegisterCertificationContract.View, R
 
     override fun init() {
 
-        register_certification_submit.setOnClickListener { }
+        register_certification_submit.setOnClickListener { mCallback.onSignInUser() }
         register_certification_back.setOnClickListener { mCallback.popBack() }
     }
 

@@ -4,8 +4,10 @@ import android.support.v4.app.FragmentManager
 import lostfinder.sobsch.lostfinder.R
 import lostfinder.sobsch.lostfinder.ui.base.BasePresenterImpl
 import lostfinder.sobsch.lostfinder.ui.register.fragment.accent.RegisterAccent
+import lostfinder.sobsch.lostfinder.ui.register.fragment.address.RegisterSignInAddress
 import lostfinder.sobsch.lostfinder.ui.register.fragment.certification.RegisterCertification
 import lostfinder.sobsch.lostfinder.ui.register.fragment.main.RegisterMain
+import lostfinder.sobsch.lostfinder.ui.register.fragment.signin.RegisterSignInUser
 
 class RegisterPresenter : BasePresenterImpl<RegisterContract.View>(), RegisterContract.Presenter {
 
@@ -35,6 +37,20 @@ class RegisterPresenter : BasePresenterImpl<RegisterContract.View>(), RegisterCo
     override fun certificationFragment() {
         supportFragmentMananger.beginTransaction()
                 .replace(R.id.register_container, RegisterCertification())
+                .addToBackStack(null)
+                .commit()
+    }
+
+    override fun signinUserFragment() {
+        supportFragmentMananger.beginTransaction()
+                .replace(R.id.register_container, RegisterSignInUser())
+                .addToBackStack(null)
+                .commit()
+    }
+
+    override fun signinAddressFragment() {
+        supportFragmentMananger.beginTransaction()
+                .replace(R.id.register_container, RegisterSignInAddress())
                 .addToBackStack(null)
                 .commit()
     }

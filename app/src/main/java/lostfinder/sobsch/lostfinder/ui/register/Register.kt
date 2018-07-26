@@ -16,8 +16,6 @@ class Register : BaseFragmentActivity<RegisterContract.View, RegisterContract.Pr
         mPresenter.mainFragment()
 
         register_back.setOnClickListener { popBack() }
-
-
     }
 
     override fun resume() {
@@ -32,9 +30,13 @@ class Register : BaseFragmentActivity<RegisterContract.View, RegisterContract.Pr
     }
 
     override fun onAccent() = mPresenter.accentFragment()
+
     override fun onCertification() = mPresenter.certificationFragment()
 
-    override fun popBack() = mPresenter.popBackStack()
+    override fun onSignInUser() = mPresenter.signinUserFragment()
 
+    override fun onSignInAddress() = mPresenter.signinAddressFragment()
+
+    override fun popBack() = mPresenter.popBackStack()
 
 }

@@ -36,4 +36,19 @@
     <string name="register_certification_content">아동(만 14세 미만)은 본인인증 후\n 부모님(법정대리인)동의가 필요합니다. \n
         법인 명의 휴대폰 사용자는 통신사 지점 또는 \n 대리점에 방문하여 법인명의 실 사용자 \n 등록 후 휴대폰 인증이 가능합니다.</string>
 
+    <!--register signin user-->
+    <string name="register_signin_user_tv1">일반 회원가입</string>
+    <string name="register_signin_user_id_hint">(아이디)</string>
+    <string name="register_signin_user_password_hint">(비밀번호)</string>
+    <string name="register_signin_user_password_check">비밀번호 확인</string>
+    <string name="register_signin_user_password_check_hint">(비밀번호 확인)</string>
+
+    <!--register signin address-->
+    <string name="register_signin_address_nickname">닉네임</string>
+    <string name="register_signin_address_nickname_hint">(닉네임)</string>
+    <string name="register_signin_address_email">이메일 주소</string>
+    <string name="register_signin_address_email_hint">(이메일 주소)</string>
+    <string name="register_signin_address_address">거주지</string>
+    <string name="register_signin_address_address_hint">(거주지)</string>
+    <string name="register_signin_other_address">(나머지 주소)</string>
 </resources>
