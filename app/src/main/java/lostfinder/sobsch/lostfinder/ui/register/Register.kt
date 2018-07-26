@@ -1,5 +1,6 @@
 package lostfinder.sobsch.lostfinder.ui.register
 
+import kotlinx.android.synthetic.main.activity_register.*
 import lostfinder.sobsch.lostfinder.R
 import lostfinder.sobsch.lostfinder.ui.base.BaseFragmentActivity
 
@@ -13,6 +14,10 @@ class Register : BaseFragmentActivity<RegisterContract.View, RegisterContract.Pr
 
         mPresenter.getSupportFragmentManager(supportFragmentManager)
         mPresenter.mainFragment()
+
+        register_back.setOnClickListener { popBack() }
+
+
     }
 
     override fun resume() {
@@ -27,6 +32,8 @@ class Register : BaseFragmentActivity<RegisterContract.View, RegisterContract.Pr
     }
 
     override fun onAccent() = mPresenter.accentFragment()
+
+    override fun popBack() = mPresenter.popBackStack()
 
 
 }

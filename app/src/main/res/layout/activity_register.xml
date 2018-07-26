@@ -41,5 +41,16 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0" />
 
+    <ImageButton
+        android:id="@+id/register_back"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginBottom="46.3dp"
+        android:layout_marginStart="24.3dp"
+        android:background="@drawable/register_back"
+        android:src="@drawable/ic_keyboard_backspace_black_24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
 
 </android.support.constraint.ConstraintLayout>

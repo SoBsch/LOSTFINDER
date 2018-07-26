@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/register_width"
+    android:layout_height="wrap_content"
+    android:background="@null">
+
+    <TextView
+        android:id="@+id/register_accent_tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/register_accent_tv1"
+        android:textColor="@color/black"
+        android:textSize="13.5sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/register_accent_tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:letterSpacing="-0.03"
+        android:lineSpacingExtra="5sp"
+        android:text="@string/register_accent_tv2"
+        android:textColor="@color/black"
+        android:textSize="10.2sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/register_accent_tv1" />
+
+    <CheckBox
+        android:id="@+id/register_accent_service_check"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginTop="26dp"
+        android:button="@drawable/accent_checkbox"
+        android:letterSpacing="-0.03"
+        android:lineSpacingExtra="27sp"
+        android:paddingStart="9.3dp"
+        android:text="@string/register_accent_checkbox_service"
+        android:textColor="@color/black"
+        android:textSize="8.5sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/register_accent_tv2" />
+
+    <TextView
+        android:id="@+id/register_accent_service_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/register_accent_checkbox_view"
+        android:textColor="@color/login_tint"
+        android:textSize="8.5sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/register_accent_service_check"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/register_accent_service_check" />
+
+    <CheckBox
+        android:id="@+id/register_accent_privacy_check"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:button="@drawable/accent_checkbox"
+        android:letterSpacing="-0.03"
+        android:lineSpacingExtra="27sp"
+        android:paddingStart="9.3dp"
+        android:text="@string/register_accent_checkbox_privacy"
+        android:textColor="@color/black"
+        android:textSize="8.5sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/register_accent_service_check" />
+
+    <TextView
+        android:id="@+id/register_accent_privacy_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/register_accent_checkbox_view"
+        android:textColor="@color/login_tint"
+        android:textSize="8.5sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/register_accent_privacy_check"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/register_accent_privacy_check" />
+
+    <View
+        android:id="@+id/register_accent_line"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="18.3dp"
+        android:background="@color/login_tint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/register_accent_privacy_check" />
+
+    <CheckBox
+        android:id="@+id/register_accent_all"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:button="@drawable/accent_checkbox"
+        android:paddingStart="9.3dp"
+        android:text="@string/register_accent_all"
+        android:textColor="@color/black"
+        android:textSize="8.5sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/register_accent_line" />
+
+    <TextView
+        android:id="@+id/register_accent_submit"
+        android:layout_width="0dp"
+        android:layout_height="34.7dp"
+        android:layout_marginTop="36.3dp"
+        android:background="@drawable/login_round"
+        android:gravity="center"
+        android:text="@string/register_accent_next"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/register_accent_all" />
+
+    <TextView
+        android:id="@+id/register_main_back"
+        android:layout_width="0dp"
+        android:layout_height="34.7dp"
+        android:layout_marginTop="4.3dp"
+        android:background="@drawable/accent_back"
+        android:gravity="center"
+        android:text="@string/register_accent_back"
+        android:textColor="@color/login_tint"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/register_accent_submit" />
+
+
+</android.support.constraint.ConstraintLayout>
