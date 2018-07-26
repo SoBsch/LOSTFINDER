@@ -7,5 +7,6 @@
     <color name="black">#000000</color>
     <color name="white">#FFFFFF</color>
 
+    <color name="login_background">#f1e6d5</color>
     <color name="login_tint">#3f9df4</color>
 </resources>

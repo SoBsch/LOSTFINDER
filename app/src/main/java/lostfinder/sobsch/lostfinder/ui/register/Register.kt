@@ -1,9 +1,9 @@
 package lostfinder.sobsch.lostfinder.ui.register
 
 import lostfinder.sobsch.lostfinder.R
-import lostfinder.sobsch.lostfinder.ui.base.BaseActivity
+import lostfinder.sobsch.lostfinder.ui.base.BaseFragmentActivity
 
-class Register : BaseActivity<RegisterContract.View, RegisterContract.Presenter>() {
+class Register : BaseFragmentActivity<RegisterContract.View, RegisterContract.Presenter>() {
 
     override var mPresenter: RegisterContract.Presenter = RegisterPresenter()
 
@@ -11,6 +11,8 @@ class Register : BaseActivity<RegisterContract.View, RegisterContract.Presenter>
 
     override fun init() {
 
+        mPresenter.getSupportFragmentManager(supportFragmentManager)
+        mPresenter.mainFragment()
     }
 
     override fun resume() {
