@@ -4,8 +4,10 @@ import android.widget.CheckBox
 import android.widget.Toast
 import kotlinx.android.synthetic.main.register_accent.*
 import lostfinder.sobsch.lostfinder.R
+import lostfinder.sobsch.lostfinder.ui.accentInfo.AccentInfoActivity
 import lostfinder.sobsch.lostfinder.ui.base.BaseFragment
 import lostfinder.sobsch.lostfinder.ui.register.RegisterEventListenter
+import org.jetbrains.anko.support.v4.intentFor
 
 class RegisterAccent : BaseFragment<RegisterAccentContract.View, RegisterAccentContract.Presenter>(), RegisterAccentContract.View {
 
@@ -32,13 +34,16 @@ class RegisterAccent : BaseFragment<RegisterAccentContract.View, RegisterAccentC
     }
 
     override fun init() {
-        
+
         register_accent_all.setOnClickListener { mPresenter.checkAllEvent() }
         register_accent_privacy_check.setOnClickListener { mPresenter.checkBoxStatus() }
         register_accent_service_check.setOnClickListener { mPresenter.checkBoxStatus() }
 
         register_accent_submit.setOnClickListener { mPresenter.validateCheckedAll(mCallback) }
         register_accent_back.setOnClickListener { mCallback.popBack() }
+
+        register_accent_service_view.setOnClickListener { context!!.startActivity(intentFor<AccentInfoActivity>()) }
+        register_accent_privacy_view.setOnClickListener { context!!.startActivity(intentFor<AccentInfoActivity>()) }
     }
 
     override fun resume() {

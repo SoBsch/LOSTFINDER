@@ -25,6 +25,7 @@
         </activity>
 
         <activity android:name=".ui.register.Register" />
+        <activity android:name=".ui.accentInfo.AccentInfoActivity" />
     </application>
 
 </manifest>
