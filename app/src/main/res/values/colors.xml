@@ -9,4 +9,5 @@
 
     <color name="login_background">#f1e6d5</color>
     <color name="login_tint">#3f9df4</color>
+    <color name="drawer_header_background">#2f6394</color>
 </resources>
