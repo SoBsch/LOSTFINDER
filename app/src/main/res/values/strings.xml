@@ -54,4 +54,21 @@
 
     <!--register done-->
 
+
+    <!--drawer header-->
+    <string name="drawer_header_title">마이페이지</string>
+    <string name="drawer_header_point"><b>내 포인트</b>\n</string>
+    <string name="drawer_header_coupon">쿠폰함</string>
+    <string name="drawer_header_performance">내 실적</string>
+
+    <!--drawer menu-->
+    <string name="header_menu_find">주인 찾아주기</string>
+    <string name="header_menu_info">내 물건 등록현황</string>
+    <string name="header_menu_choice">나를 택한 지인</string>
+    <string name="header_menu_delivery">배송 서비스 현황 (준비중)</string>
+    <string name="header_menu_message">주고 받은 메세지</string>
+    <string name="header_menu_review">나의 리뷰</string>
+    <string name="header_menu_point">포인트 쌓기</string>
+    <string name="header_menu_charge">충전하기</string>
+
 </resources>

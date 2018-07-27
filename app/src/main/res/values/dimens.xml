@@ -2,4 +2,6 @@
 <resources>
 
     <dimen name="register_width">220.3dp</dimen>
+
+    <dimen name="drawer_button_size">7sp</dimen>
 </resources>
