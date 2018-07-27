@@ -51,4 +51,7 @@
     <string name="register_signin_address_address">거주지</string>
     <string name="register_signin_address_address_hint">(거주지)</string>
     <string name="register_signin_other_address">(나머지 주소)</string>
+
+    <!--register done-->
+
 </resources>
