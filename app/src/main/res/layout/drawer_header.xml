@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="228.7dp"
     android:background="@color/drawer_header_background">
 
     <TextView
+        android:id="@+id/drawer_header_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="36.3dp"
@@ -15,5 +17,70 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/drawer_header_image"
+        android:layout_width="79.7dp"
+        android:layout_height="79.3dp"
+        android:layout_marginTop="21.7dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/drawer_header_title" />
+
+    <TextView
+        android:id="@+id/drawer_header_nickname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9dp"
+        android:textColor="#f1e6d5"
+        android:textSize="13.7sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/drawer_header_image"
+        app:layout_constraintStart_toStartOf="@id/drawer_header_image"
+        app:layout_constraintTop_toBottomOf="@id/drawer_header_image"
+        tools:text="로스트파인더" />
+
+    <Button
+        android:id="@+id/drawer_header_point"
+        android:layout_width="62.5dp"
+        android:layout_height="25.5dp"
+
+        android:layout_marginTop="10.6dp"
+        android:background="@drawable/drawer_left_header_round"
+        android:text="내 포인트 \n 4108"
+        android:textColor="@color/drawer_header_background"
+        android:textSize="7sp"
+        app:layout_constraintEnd_toStartOf="@id/drawer_header_coupon"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/drawer_header_nickname" />
+
+    <Button
+        android:id="@+id/drawer_header_coupon"
+        android:layout_width="64dp"
+        android:layout_height="25.5dp"
+        android:layout_marginStart="0.7dp"
+        android:background="@color/login_background"
+        android:text="쿠폰함"
+        android:textColor="@color/drawer_header_background"
+        android:textSize="7sp"
+        app:layout_constraintBottom_toBottomOf="@id/drawer_header_point"
+        app:layout_constraintEnd_toStartOf="@id/drawer_header_performance"
+        app:layout_constraintStart_toEndOf="@id/drawer_header_point"
+        app:layout_constraintTop_toTopOf="@id/drawer_header_point" />
+
+    <Button
+        android:id="@+id/drawer_header_performance"
+        android:layout_width="62.5dp"
+        android:layout_height="25.5dp"
+        android:layout_marginStart="0.7dp"
+        android:background="@drawable/drawer_right_header_round"
+        android:text="내 실적"
+        android:textColor="@color/drawer_header_background"
+        android:textSize="7sp"
+        app:layout_constraintBottom_toBottomOf="@+id/drawer_header_coupon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/drawer_header_coupon"
+        app:layout_constraintTop_toTopOf="@id/drawer_header_coupon" />
 
 </android.support.constraint.ConstraintLayout>
