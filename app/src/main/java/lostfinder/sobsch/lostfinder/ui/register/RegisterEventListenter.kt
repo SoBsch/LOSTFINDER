@@ -7,6 +7,7 @@ interface RegisterEventListenter {
     fun onSignInUser()  // 아이디 입력
     fun onSignInAddress() // 주소 입력
     fun onRegisterDone() //  완료 페이지
+    fun onRegisterFinish()    // 회원가입 페이지 종료
 
     fun popBack()
 }

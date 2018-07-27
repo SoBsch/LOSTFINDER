@@ -1,5 +1,6 @@
 package lostfinder.sobsch.lostfinder.ui.register.fragment.done
 
+import kotlinx.android.synthetic.main.register_done.*
 import lostfinder.sobsch.lostfinder.R
 import lostfinder.sobsch.lostfinder.ui.base.BaseFragment
 import lostfinder.sobsch.lostfinder.ui.register.RegisterEventListenter
@@ -24,7 +25,7 @@ class RegisterDone : BaseFragment<RegisterDoneContract.View, RegisterDoneContrac
     override fun init() {
 
         // TODO 로그인하기 버튼 클릭 시 액티비티 종료
-
+        register_done_submit.setOnClickListener { mCallback.onRegisterFinish() }
     }
 
     override fun resume() {
