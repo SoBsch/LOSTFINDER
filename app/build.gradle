@@ -54,4 +54,7 @@ dependencies {
 
     debugImplementation deps.leakcanary_debug
     releaseImplementation deps.leakcanary_release
+
+    implementation deps.glide
+    kapt deps.glide_compiler
 }
