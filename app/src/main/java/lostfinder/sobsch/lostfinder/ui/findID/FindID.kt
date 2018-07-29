@@ -16,6 +16,12 @@ class FindID : BaseActivity<FindIDContract.View, FindIDContract.Presenter>(), Fi
     override fun init() {
 
         mPresenter.loadImage(this)
+
+        // 휴대폰으로 찾기
+        find_id_phone.setOnClickListener { }
+
+        // 메일로 찾기
+        find_id_mail.setOnClickListener {}
     }
 
     override fun resume() {
