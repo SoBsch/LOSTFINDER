@@ -26,7 +26,12 @@
 
         <activity android:name=".ui.register.Register" />
         <activity android:name=".ui.accentInfo.AccentInfoActivity" />
-        <activity android:name=".ui.findAddress.FindAddressActivity"/>
+        <activity
+            android:name=".ui.findAddress.FindAddressActivity"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+
+        <activity android:name=".ui.findID.FindID" />
+        <activity android:name=".ui.findPassword.FindPassword" />
     </application>
 
 </manifest>
