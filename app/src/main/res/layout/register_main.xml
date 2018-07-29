@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="@dimen/register_width"
     android:layout_height="wrap_content"
+    tools:background="@color/login_background"
     android:background="@null">
 
 
@@ -37,17 +39,20 @@
     <!--사람이미지-->
     <ImageView
         android:id="@+id/register_main_person"
-        android:layout_width="74.7dp"
-        android:layout_height="74.7dp"
-        android:layout_marginTop="29dp"
+        android:layout_width="74.3dp"
+        android:layout_height="74.3dp"
+        android:layout_marginTop="29.3dp"
+        android:scaleType="fitXY"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/register_main_message2" />
+        app:layout_constraintTop_toBottomOf="@id/register_main_message2"
+        tools:src="@drawable/user_icon" />
 
     <TextView
         android:id="@+id/register_main_submit"
         android:layout_width="0dp"
         android:layout_height="34.7dp"
+        android:layout_marginTop="29dp"
         android:background="@drawable/login_round"
         android:gravity="center"
         android:text="@string/register_main_submit"

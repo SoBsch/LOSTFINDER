@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="@dimen/register_width"
     android:layout_height="wrap_content"
-    android:background="@null">
+    android:background="@null"
+    tools:background="@color/login_background">
 
     <TextView
         android:id="@+id/register_certification_tv1"
