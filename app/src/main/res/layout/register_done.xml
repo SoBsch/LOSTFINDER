@@ -1,21 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="@dimen/register_width"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@null">
+    android:background="@null"
+    tools:background="@color/login_background">
 
 
-    <TextView
+    <ImageView
         android:id="@+id/register_done_message1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:letterSpacing="0.3"
-        android:lineSpacingExtra="-15.5sp"
-        android:text="COMPLETE"
-        android:textColor="#3f9df4"
-        android:textSize="19.3dp"
-        android:textStyle="bold"
+        android:scaleType="fitXY"
+        android:src="@drawable/complete"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -25,6 +23,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:fontFamily="@font/basic"
         android:letterSpacing="-0.03"
         android:lineSpacingExtra="5sp"
         android:text="@string/register_main_tv2"
@@ -37,23 +36,28 @@
     <!--사람이미지-->
     <TextView
         android:id="@+id/register_done_finish_message"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="29dp"
-        android:text="로스트파인더님 환영합니다!
-회원가입이 완료되었습니다.
-정보가 많을수록 찾을 확률과
-서비스혜택이 높아집니다!"
+        android:layout_width="0dp"
+        android:layout_height="156dp"
+        android:layout_marginTop="19.3dp"
+        android:background="@color/login_background"
+        android:fontFamily="@font/basic"
+        android:gravity="center"
+        android:letterSpacing="-0.03"
+        android:lineSpacingExtra="4.8sp"
+        android:text="@string/register_done_content"
+        android:textColor="@color/black"
+        android:textSize="15.2sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/register_done_message2" />
 
     <TextView
         android:id="@+id/register_done_submit"
-        android:layout_width="0dp"
+        android:layout_width="210.3dp"
         android:layout_height="34.7dp"
         android:layout_marginTop="22dp"
         android:background="@drawable/login_round"
+        android:fontFamily="@font/basic"
         android:gravity="center"
         android:text="로그인하기"
         android:textColor="@color/white"

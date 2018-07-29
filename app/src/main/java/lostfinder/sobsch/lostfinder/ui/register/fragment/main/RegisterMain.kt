@@ -1,5 +1,6 @@
 package lostfinder.sobsch.lostfinder.ui.register.fragment.main
 
+import android.widget.ImageView
 import kotlinx.android.synthetic.main.register_main.*
 import lostfinder.sobsch.lostfinder.R
 import lostfinder.sobsch.lostfinder.ui.base.BaseFragment
@@ -13,6 +14,8 @@ class RegisterMain : BaseFragment<RegisterMainContract.View, RegisterMainContrac
 
     override fun getResId(): Int = R.layout.register_main
 
+    override fun personImage(): ImageView = register_main_person
+
     override fun attach() {
 
         try {
@@ -25,6 +28,7 @@ class RegisterMain : BaseFragment<RegisterMainContract.View, RegisterMainContrac
 
     override fun init() {
 
+        mPresenter.loadImage(context!!)
         register_main_submit.setOnClickListener { mCallback.onAccent() }
     }
 

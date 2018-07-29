@@ -1,15 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="@dimen/register_width"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@null">
+    android:background="@null"
+    tools:background="@color/login_background">
+
+    <android.support.design.internal.BaselineLayout
+        android:id="@+id/address_left_base_line"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginStart="75dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.design.internal.BaselineLayout
+        android:id="@+id/address_right_base_line"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="75dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/register_signin_address_tv1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/basic"
         android:gravity="center_horizontal"
         android:letterSpacing="-0.03"
         android:lineSpacingExtra="4.7sp"
@@ -17,7 +38,7 @@
         android:textColor="@color/black"
         android:textSize="12.5sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@id/address_left_base_line"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -25,23 +46,23 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/basic"
         android:letterSpacing="0.05"
         android:lineSpacingExtra="23.3sp"
         android:text="@string/register_signin_address_nickname"
         android:textColor="#cc000000"
         android:textSize="9.3sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@id/address_left_base_line"
         app:layout_constraintTop_toBottomOf="@id/register_signin_address_tv1" />
 
     <android.support.design.widget.TextInputLayout
         android:id="@+id/register_signin_address_nickname_layer"
-        android:layout_width="0dp"
+        android:layout_width="175dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="15dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@id/register_signin_address_nickname_tv"
+        app:layout_constraintEnd_toStartOf="@id/address_right_base_line"
+        app:layout_constraintStart_toEndOf="@id/address_left_base_line"
         app:layout_constraintTop_toBottomOf="@id/register_signin_address_nickname_tv">
 
         <android.support.design.widget.TextInputEditText
@@ -49,6 +70,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:backgroundTint="@color/login_tint"
+            android:fontFamily="@font/basic"
             android:hint="@string/register_signin_address_nickname_hint"
             android:imeOptions="actionNext"
             android:inputType="text"
@@ -61,24 +83,24 @@
         android:id="@+id/register_signin_address_email_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="25dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/basic"
         android:letterSpacing="0.05"
         android:lineSpacingExtra="23.3sp"
         android:text="@string/password_hint"
         android:textColor="#cc000000"
         android:textSize="9.3sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@id/address_left_base_line"
         app:layout_constraintTop_toBottomOf="@id/register_signin_address_nickname_layer" />
 
     <android.support.design.widget.TextInputLayout
         android:id="@+id/register_signin_address_email_layer"
-        android:layout_width="0dp"
+        android:layout_width="175dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="15dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@id/register_signin_address_email_tv"
+        app:layout_constraintEnd_toStartOf="@id/address_right_base_line"
+        app:layout_constraintStart_toEndOf="@id/address_left_base_line"
         app:layout_constraintTop_toBottomOf="@id/register_signin_address_email_tv">
 
         <android.support.design.widget.TextInputEditText
@@ -86,7 +108,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:backgroundTint="@color/login_tint"
-
+            android:fontFamily="@font/basic"
             android:hint="@string/register_signin_address_email_hint"
             android:imeOptions="actionNext"
             android:inputType="textPassword"
@@ -99,24 +121,23 @@
         android:id="@+id/register_signin_address_address_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="25dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
         android:letterSpacing="0.05"
         android:lineSpacingExtra="23.3sp"
         android:text="@string/register_signin_address_address"
         android:textColor="#cc000000"
         android:textSize="9.3sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@id/address_left_base_line"
         app:layout_constraintTop_toBottomOf="@id/register_signin_address_email_layer" />
 
     <android.support.design.widget.TextInputLayout
         android:id="@+id/register_signin_address_adddress_layer"
-        android:layout_width="0dp"
+        android:layout_width="123.3dp"
         android:layout_height="38dp"
-        android:layout_marginEnd="66.7dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@id/register_signin_address_address_tv"
+        app:layout_constraintEnd_toStartOf="@id/register_signin_address_find"
+        app:layout_constraintStart_toEndOf="@id/address_left_base_line"
         app:layout_constraintTop_toBottomOf="@id/register_signin_address_address_tv">
 
         <android.support.design.widget.TextInputEditText
@@ -143,17 +164,16 @@
         android:textColor="@color/white"
         android:textSize="7.8sp"
         app:layout_constraintBottom_toBottomOf="@id/register_signin_address_adddress_layer"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/address_right_base_line"
         app:layout_constraintStart_toEndOf="@id/register_signin_address_adddress_layer"
         app:layout_constraintTop_toTopOf="@id/register_signin_address_adddress_layer" />
 
     <android.support.design.widget.TextInputLayout
         android:id="@+id/register_signin_address_other_address_layer"
-        android:layout_width="0dp"
+        android:layout_width="175dp"
         android:layout_height="38dp"
-        android:layout_marginEnd="15dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@id/register_signin_address_adddress_layer"
+        app:layout_constraintEnd_toStartOf="@id/address_right_base_line"
+        app:layout_constraintStart_toEndOf="@id/address_left_base_line"
         app:layout_constraintTop_toBottomOf="@id/register_signin_address_adddress_layer">
 
         <android.support.design.widget.TextInputEditText
@@ -161,6 +181,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:backgroundTint="@color/login_tint"
+            android:fontFamily="@font/basic"
             android:hint="@string/register_signin_other_address"
             android:imeOptions="actionDone"
             android:inputType="textPassword"
@@ -180,8 +201,8 @@
         android:textColor="@color/white"
         android:textSize="15sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/address_right_base_line"
+        app:layout_constraintStart_toEndOf="@id/address_left_base_line"
         app:layout_constraintTop_toBottomOf="@id/register_signin_address_other_address_layer" />
 
     <TextView
@@ -195,8 +216,8 @@
         android:textColor="@color/login_tint"
         android:textSize="15sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/address_right_base_line"
+        app:layout_constraintStart_toEndOf="@id/address_left_base_line"
         app:layout_constraintTop_toBottomOf="@id/register_signin_address_submit" />
 
 </android.support.constraint.ConstraintLayout>
