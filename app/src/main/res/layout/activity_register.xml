@@ -8,37 +8,39 @@
     tools:context=".ui.register.Register">
 
 
-    <ImageView
-        android:id="@+id/register_iv1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24.3dp"
-        android:layout_marginTop="30.7dp"
-        android:src="@drawable/ic_menu_black_24dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <TextView
+        android:id="@+id/register_tv1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
+        android:layout_marginStart="58dp"
+        android:layout_marginTop="29.7dp"
         android:text="회원가입"
         android:textColor="@color/black"
         android:textSize="19.3dp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@id/register_iv1"
-        app:layout_constraintStart_toEndOf="@id/register_iv1"
-        app:layout_constraintTop_toTopOf="@id/register_iv1" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/register_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="65.3dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/register_tv1"
+        tools:src="@drawable/invalid_name" />
 
     <FrameLayout
         android:id="@+id/register_container"
         android:layout_width="220.3dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="197.7dp"
+        android:layout_marginTop="41dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/register_logo"
         app:layout_constraintVertical_bias="0" />
 
     <ImageButton

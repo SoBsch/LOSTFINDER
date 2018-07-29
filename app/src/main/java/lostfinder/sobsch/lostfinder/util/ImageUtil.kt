@@ -11,13 +11,14 @@ import com.bumptech.glide.request.RequestOptions
 object ImageUtil {
 
     private val requestOptions = RequestOptions()
-            .diskCacheStrategy(DiskCacheStrategy.RESOURCE)
+            .diskCacheStrategy(DiskCacheStrategy.NONE)
 
     private val roundOptions = RequestOptions()
             .transforms(CenterCrop(), RoundedCorners(10))
 
     fun squareDrawableImage(imageView: ImageView, url: Int, context: Context) = Glide.with(context)
             .load(url)
+            .apply(requestOptions)
             .into(imageView)
 
 
