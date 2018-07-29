@@ -2,6 +2,7 @@ package lostfinder.sobsch.lostfinder.ui.register
 
 import android.content.Context
 import android.support.v4.app.FragmentManager
+import android.support.v4.content.ContextCompat
 import lostfinder.sobsch.lostfinder.R
 import lostfinder.sobsch.lostfinder.ui.base.BasePresenterImpl
 import lostfinder.sobsch.lostfinder.ui.register.fragment.accent.RegisterAccent
@@ -58,11 +59,13 @@ class RegisterPresenter : BasePresenterImpl<RegisterContract.View>(), RegisterCo
                 .commit()
     }
 
-    override fun doneFragment() {
+    override fun doneFragment(context: Context) {
         supportFragmentMananger.beginTransaction()
                 .replace(R.id.register_container, RegisterDone())
                 .addToBackStack(null)
                 .commit()
+
+        mView!!.mainContainer().setBackgroundColor(ContextCompat.getColor(context, R.color.white))
     }
 
     override fun loadImage(context: Context) {

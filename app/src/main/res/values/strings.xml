@@ -53,6 +53,7 @@
     <string name="register_signin_other_address">(나머지 주소)</string>
 
     <!--register done-->
+    <string name="register_done_content">님 환영합니다!\n회원가입이 완료되었습니다.\n정보가 많을수록 찾을 확률과\n서비스혜택이 높아집니다!</string>
 
 
     <!--drawer header-->

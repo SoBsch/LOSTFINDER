@@ -2,39 +2,56 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="@dimen/register_width"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@null"
     tools:background="@color/login_background">
+
+
+    <android.support.design.internal.BaselineLayout
+        android:id="@+id/certification_left_base_line"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginStart="71.3dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.design.internal.BaselineLayout
+        android:id="@+id/certification_right_base_line"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="72dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/register_certification_tv1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="14dp"
         android:letterSpacing="-0.03"
         android:lineSpacingExtra="4.7sp"
         android:text="@string/register_certification_tv1"
         android:textColor="@color/black"
         android:textSize="12.5sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@id/certification_left_base_line"
         app:layout_constraintTop_toTopOf="parent" />
 
     <!-- 휴대폰인증 이미지 -->
-    <!--<ImageView
-        android:id="@+id/register_certification_phone"
-        android:layout_width="97dp"
-        android:layout_height="97dp"
-        android:layout_marginTop="25dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/register_certification_tv1" />-->
+
     <include
         android:id="@+id/register_certification_phone_container"
         layout="@layout/certification_phone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@id/certification_left_base_line"
         app:layout_constraintTop_toBottomOf="@id/register_certification_tv1" />
 
     <View
@@ -42,26 +59,20 @@
         android:layout_width="1dp"
         android:layout_height="134.7dp"
         android:layout_marginStart="11.3dp"
+        android:layout_marginTop="17dp"
         android:background="#999287"
-        app:layout_constraintBottom_toBottomOf="@id/register_certification_phone_container"
         app:layout_constraintStart_toEndOf="@id/register_certification_phone_container"
-        app:layout_constraintTop_toTopOf="@id/register_certification_phone_container" />
+        app:layout_constraintTop_toBottomOf="@id/register_certification_tv1" />
 
-    <!--<ImageView
-        android:id="@+id/register_certification_ipin"
-        android:layout_width="97dp"
-        android:layout_height="97dp"
-        android:layout_marginStart="10.7dp"
-        android:layout_marginTop="25dp"
-        app:layout_constraintStart_toEndOf="@id/register_certification_line"
-        app:layout_constraintTop_toBottomOf="@id/register_certification_tv1" />-->
+
     <include
         android:id="@+id/register_certification_ipin_container"
         layout="@layout/certification_ipin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="@id/register_certification_phone_container"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/certification_right_base_line"
+        app:layout_constraintHorizontal_bias="1"
         app:layout_constraintStart_toEndOf="@id/register_certification_line"
         app:layout_constraintTop_toTopOf="@id/register_certification_phone_container" />
 
@@ -69,14 +80,14 @@
         android:id="@+id/register_certification_content"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="17dp"
-        android:gravity="center_horizontal"
-        android:lineSpacingExtra="6.2sp"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:lineSpacingExtra="3sp"
         android:text="@string/register_certification_content"
         android:textColor="#cc000000"
         android:textSize="7.8sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/certification_right_base_line"
+        app:layout_constraintStart_toEndOf="@id/certification_left_base_line"
         app:layout_constraintTop_toBottomOf="@id/register_certification_line" />
 
     <TextView
@@ -90,8 +101,8 @@
         android:textColor="@color/white"
         android:textSize="15sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/certification_right_base_line"
+        app:layout_constraintStart_toEndOf="@id/certification_left_base_line"
         app:layout_constraintTop_toBottomOf="@id/register_certification_content" />
 
     <TextView
@@ -105,8 +116,8 @@
         android:textColor="@color/login_tint"
         android:textSize="15sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/certification_right_base_line"
+        app:layout_constraintStart_toEndOf="@id/certification_left_base_line"
         app:layout_constraintTop_toBottomOf="@id/register_certification_submit" />
 
 

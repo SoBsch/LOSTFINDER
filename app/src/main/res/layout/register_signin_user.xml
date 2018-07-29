@@ -1,15 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="@dimen/register_width"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@null">
+    android:background="@null"
+    tools:background="@color/login_background">
+
+    <android.support.design.internal.BaselineLayout
+        android:id="@+id/user_left_base_line"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginStart="75dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.design.internal.BaselineLayout
+        android:id="@+id/user_right_base_line"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="75dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/register_signin_user_tv1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/basic"
         android:gravity="center_horizontal"
         android:letterSpacing="-0.03"
         android:lineSpacingExtra="4.7sp"
@@ -17,31 +38,31 @@
         android:textColor="@color/black"
         android:textSize="12.5sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@id/user_left_base_line"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/register_signin_user_id_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="25dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="22dp"
+        android:fontFamily="@font/basic"
         android:letterSpacing="0.05"
         android:lineSpacingExtra="23.3sp"
         android:text="@string/id_hint"
         android:textColor="#cc000000"
         android:textSize="9.3sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@id/user_left_base_line"
         app:layout_constraintTop_toBottomOf="@id/register_signin_user_tv1" />
 
     <android.support.design.widget.TextInputLayout
         android:id="@+id/register_signin_user_id_layer"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="15dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@id/register_signin_user_id_tv"
+        android:layout_width="175dp"
+        android:layout_height="40dp"
+        app:layout_constraintEnd_toStartOf="@id/user_right_base_line"
+        app:layout_constraintStart_toEndOf="@id/user_left_base_line"
         app:layout_constraintTop_toBottomOf="@id/register_signin_user_id_tv">
 
         <android.support.design.widget.TextInputEditText
@@ -49,6 +70,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:backgroundTint="@color/login_tint"
+            android:fontFamily="@font/basic"
             android:hint="@string/register_signin_user_id_hint"
             android:imeOptions="actionNext"
             android:inputType="text"
@@ -61,24 +83,24 @@
         android:id="@+id/register_signin_user_password_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="5dp"
+        android:fontFamily="@font/basic"
         android:letterSpacing="0.05"
         android:lineSpacingExtra="23.3sp"
         android:text="@string/password_hint"
         android:textColor="#cc000000"
         android:textSize="9.3sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@id/user_left_base_line"
         app:layout_constraintTop_toBottomOf="@id/register_signin_user_id_layer" />
 
     <android.support.design.widget.TextInputLayout
         android:id="@+id/register_signin_user_password_layer"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="15dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@id/register_signin_user_password_tv"
+        android:layout_width="175dp"
+        android:layout_height="40dp"
+        app:layout_constraintEnd_toStartOf="@id/user_right_base_line"
+        app:layout_constraintStart_toEndOf="@id/user_left_base_line"
         app:layout_constraintTop_toBottomOf="@id/register_signin_user_password_tv">
 
         <android.support.design.widget.TextInputEditText
@@ -86,6 +108,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:backgroundTint="@color/login_tint"
+            android:fontFamily="@font/basic"
             android:hint="@string/register_signin_user_password_hint"
             android:imeOptions="actionNext"
             android:inputType="textPassword"
@@ -98,24 +121,23 @@
         android:id="@+id/register_signin_user_password_check_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="5dp"
+        android:fontFamily="@font/basic"
         android:letterSpacing="0.05"
-        android:lineSpacingExtra="23.3sp"
         android:text="@string/register_signin_user_password_check"
         android:textColor="#cc000000"
         android:textSize="9.3sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@id/user_left_base_line"
         app:layout_constraintTop_toBottomOf="@id/register_signin_user_password_layer" />
 
     <android.support.design.widget.TextInputLayout
         android:id="@+id/register_signin_user_password_check_layer"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="15dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@id/register_signin_user_password_check_tv"
+        android:layout_width="175dp"
+        android:layout_height="40dp"
+        app:layout_constraintEnd_toStartOf="@id/user_right_base_line"
+        app:layout_constraintStart_toEndOf="@id/user_left_base_line"
         app:layout_constraintTop_toBottomOf="@id/register_signin_user_password_check_tv">
 
         <android.support.design.widget.TextInputEditText
@@ -123,6 +145,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:backgroundTint="@color/login_tint"
+            android:fontFamily="@font/basic"
             android:hint="@string/register_signin_user_password_check_hint"
             android:imeOptions="actionDone"
             android:inputType="textPassword"
@@ -137,13 +160,14 @@
         android:layout_height="34.7dp"
         android:layout_marginTop="20dp"
         android:background="@drawable/login_round"
+        android:fontFamily="@font/basic"
         android:gravity="center"
         android:text="@string/register_accent_next"
         android:textColor="@color/white"
         android:textSize="15sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/user_right_base_line"
+        app:layout_constraintStart_toEndOf="@id/user_left_base_line"
         app:layout_constraintTop_toBottomOf="@id/register_signin_user_password_check_layer" />
 
     <TextView
@@ -152,13 +176,14 @@
         android:layout_height="34.7dp"
         android:layout_marginTop="4.3dp"
         android:background="@drawable/accent_back"
+        android:fontFamily="@font/basic"
         android:gravity="center"
         android:text="@string/register_accent_back"
         android:textColor="@color/login_tint"
         android:textSize="15sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/user_right_base_line"
+        app:layout_constraintStart_toEndOf="@id/user_left_base_line"
         app:layout_constraintTop_toBottomOf="@id/register_signin_submit" />
 
 </android.support.constraint.ConstraintLayout>

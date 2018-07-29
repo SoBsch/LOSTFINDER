@@ -2,33 +2,30 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="@dimen/register_width"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="@null"
     tools:background="@color/login_background"
-    android:background="@null">
+    tools:layout_height="261dp">
 
 
-    <TextView
+    <ImageView
         android:id="@+id/register_main_message1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:letterSpacing="0.3"
-        android:lineSpacingExtra="-15.5sp"
-        android:text="@string/register_main_welcome"
-        android:textColor="#3f9df4"
-        android:textSize="19.3dp"
-        android:textStyle="bold"
+        android:src="@drawable/welcome"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
 
     <TextView
         android:id="@+id/register_main_message2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:fontFamily="@font/basic"
         android:letterSpacing="-0.03"
-        android:lineSpacingExtra="5sp"
         android:text="@string/register_main_tv2"
         android:textColor="#cc000000"
         android:textSize="13.5sp"
@@ -41,7 +38,7 @@
         android:id="@+id/register_main_person"
         android:layout_width="74.3dp"
         android:layout_height="74.3dp"
-        android:layout_marginTop="29.3dp"
+        android:layout_marginTop="25dp"
         android:scaleType="fitXY"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -50,10 +47,11 @@
 
     <TextView
         android:id="@+id/register_main_submit"
-        android:layout_width="0dp"
+        android:layout_width="210.3dp"
         android:layout_height="34.7dp"
-        android:layout_marginTop="29dp"
+        android:layout_marginTop="25dp"
         android:background="@drawable/login_round"
+        android:fontFamily="@font/basic"
         android:gravity="center"
         android:text="@string/register_main_submit"
         android:textColor="@color/white"
@@ -67,7 +65,8 @@
         android:id="@+id/register_main_serviceintro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20.7dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/basic"
         android:gravity="center_horizontal"
         android:letterSpacing="-0.03"
         android:lineSpacingExtra="8.5sp"
@@ -83,10 +82,10 @@
         android:id="@+id/register_main_sericecenter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20.7dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/basic"
         android:gravity="center_horizontal"
         android:letterSpacing="-0.03"
-        android:lineSpacingExtra="8.5sp"
         android:text="@string/register_main_service_center"
         android:textColor="#000000"
         android:textSize="10.3sp"
