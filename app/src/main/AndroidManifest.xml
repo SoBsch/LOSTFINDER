@@ -29,6 +29,9 @@
         <activity
             android:name=".ui.findAddress.FindAddressActivity"
             android:windowSoftInputMode="stateAlwaysHidden" />
+
+        <activity android:name=".ui.findID.FindID" />
+        <activity android:name=".ui.findPassword.FindPassword" />
     </application>
 
 </manifest>
