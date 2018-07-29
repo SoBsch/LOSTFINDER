@@ -48,9 +48,9 @@
 
 * 주소검색 - FindAddressActivity `Activity`
 
-* 아이디 찾기 - FindID 'Activity'
+* 아이디 찾기 - FindID `Activity`
 
-* 비밀번호 찾기 - FindPassword 'Activity`
+* 비밀번호 찾기 - FindPassword `Activity`
   
 * 메인화면 - MainActivity `Activity` ( ViewPager, Tablayout, NavigationDrawer)
   * `Fragment`
