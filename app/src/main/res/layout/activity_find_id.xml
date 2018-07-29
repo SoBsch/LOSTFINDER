@@ -31,4 +31,24 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/find_id_title" />
 
+    <include
+        android:id="@+id/find_id_phone"
+        layout="@layout/find_id_phone"
+        android:layout_width="198.7dp"
+        android:layout_height="164.3dp"
+        android:layout_marginTop="25.7dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/find_id_logo" />
+
+    <include
+        android:id="@+id/find_id_mail"
+        layout="@layout/find_id_mail"
+        android:layout_width="198.7dp"
+        android:layout_height="164.3dp"
+        android:layout_marginTop="2.3dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/find_id_phone" />
+
 </android.support.constraint.ConstraintLayout>
