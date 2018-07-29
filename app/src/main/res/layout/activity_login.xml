@@ -9,9 +9,10 @@
 
     <ImageView
         android:id="@+id/login_logo"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="80dp"
+        android:layout_width="179dp"
+        android:layout_height="66.3dp"
+        android:layout_marginTop="101dp"
+        android:scaleType="fitXY"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -23,6 +24,7 @@
         android:layout_height="50dp"
         android:layout_marginEnd="50dp"
         android:layout_marginStart="50dp"
+        android:layout_marginTop="42dp"
         android:background="@null"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
