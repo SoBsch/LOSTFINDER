@@ -83,5 +83,12 @@
     <string name="find_password_phone_submit">휴대폰 인증</string>
     <string name="find_password_mail_submit">메일 인증</string>
 
+    <!--home-->
+    <string name="home_stuff_title"><b>내 물건</b> 현황</string>
+    <string name="home_mission_title"><b>미션</b> 현황</string>
+    <string name="home_giftcon_title">기프트콘 구매</string>
+    <string name="home_terms"><b>이용약관</b></string>
+    <string name="home_tel"><b>고객센터 010-6622-0000</b></string>
+    <string name="home_accent"><b>개인정보 처리방침</b></string>
 
 </resources>
