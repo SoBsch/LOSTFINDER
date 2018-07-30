@@ -82,7 +82,8 @@ class MainActivity : BaseActivity<MainContract.View, MainContract.Presenter>(), 
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu, menu)
-        return super.onCreateOptionsMenu(menu)
+        //return super.onCreateOptionsMenu(menu)
+        return true
     }
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
@@ -92,7 +93,10 @@ class MainActivity : BaseActivity<MainContract.View, MainContract.Presenter>(), 
                 main_drawer_layout.openDrawer(GravityCompat.START)
                 return true
             }
-            R.id.action_settings -> return true
+            R.id.action_search -> {
+
+                return true
+            }
         }
         return super.onOptionsItemSelected(item)
     }
