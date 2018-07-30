@@ -12,6 +12,8 @@ import kotlinx.android.synthetic.main.main_header.*
 import lostfinder.sobsch.lostfinder.R
 import lostfinder.sobsch.lostfinder.adapter.TabLayoutPageAdapter
 import lostfinder.sobsch.lostfinder.ui.base.BaseActivity
+import lostfinder.sobsch.lostfinder.ui.stuffinfo.StuffInformation
+import org.jetbrains.anko.intentFor
 
 
 class MainActivity : BaseActivity<MainContract.View, MainContract.Presenter>(), NavigationView.OnNavigationItemSelectedListener,
@@ -69,6 +71,8 @@ class MainActivity : BaseActivity<MainContract.View, MainContract.Presenter>(), 
         main_drawer_layout.closeDrawers()
 
         when (item.itemId) {
+
+            R.id.header_menu_info -> startActivity(intentFor<StuffInformation>())
 
         }
         return true
