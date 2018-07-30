@@ -7,6 +7,7 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.load.resource.bitmap.CenterCrop
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.bumptech.glide.request.RequestOptions
+import lostfinder.sobsch.lostfinder.R
 
 object ImageUtil {
 
@@ -15,10 +16,18 @@ object ImageUtil {
 
     private val roundOptions = RequestOptions()
             .transforms(CenterCrop(), RoundedCorners(10))
+            .placeholder(R.drawable.user_diffult)
+            .error(R.drawable.user_diffult)
+            .diskCacheStrategy(DiskCacheStrategy.NONE)
 
     fun squareDrawableImage(imageView: ImageView, url: Int, context: Context) = Glide.with(context)
             .load(url)
             .apply(requestOptions)
+            .into(imageView)
+
+    fun profileImage(imageView: ImageView, url: Int?, context: Context) = Glide.with(context)
+            .load(url)
+            .apply(roundOptions)
             .into(imageView)
 
 

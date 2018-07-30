@@ -5,6 +5,8 @@ import android.support.design.widget.TabLayout
 import android.support.v4.view.GravityCompat
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
+import android.widget.ImageView
 import kotlinx.android.synthetic.main.main_content.*
 import kotlinx.android.synthetic.main.main_header.*
 import lostfinder.sobsch.lostfinder.R
@@ -13,14 +15,19 @@ import lostfinder.sobsch.lostfinder.ui.base.BaseActivity
 
 
 class MainActivity : BaseActivity<MainContract.View, MainContract.Presenter>(), NavigationView.OnNavigationItemSelectedListener,
-        TabLayout.OnTabSelectedListener {
+        TabLayout.OnTabSelectedListener, MainContract.View {
 
+    private lateinit var navigationHeader: View
 
     override var mPresenter: MainContract.Presenter = MainPresenter()
 
     override fun getResID(): Int = R.layout.activity_main
 
+    override fun profileImage(): ImageView = navigationHeader.findViewById(R.id.drawer_header_image)
+
     override fun init() {
+
+        initNavigationHeader()
 
         attachActionBar()
 
@@ -28,6 +35,13 @@ class MainActivity : BaseActivity<MainContract.View, MainContract.Presenter>(), 
 
         setTabLayout()
         setViewPager()
+
+        mPresenter.loadNavigationItems(this)
+    }
+
+    // 네비게이션 헤터 세팅
+    private fun initNavigationHeader() {
+        navigationHeader = main_navigation.inflateHeaderView(R.layout.drawer_header)
     }
 
     private fun attachActionBar() {
