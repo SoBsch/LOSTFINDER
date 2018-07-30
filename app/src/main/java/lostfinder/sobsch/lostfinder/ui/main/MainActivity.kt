@@ -36,12 +36,12 @@ class MainActivity : BaseActivity<MainContract.View, MainContract.Presenter>(), 
         setTabLayout()
         setViewPager()
 
-        mPresenter.loadNavigationItems(this)
     }
 
     // 네비게이션 헤터 세팅
     private fun initNavigationHeader() {
         navigationHeader = main_navigation.inflateHeaderView(R.layout.drawer_header)
+        mPresenter.loadNavigationItems(this)
     }
 
     private fun attachActionBar() {
