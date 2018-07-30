@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="273.3dp"
+    android:layout_height="132.3dp"
+    android:layout_gravity="center|top"
+    android:background="@null"
+    tools:background="@drawable/black_square_edge">
+
+    <TextView
+        android:id="@+id/home_giftcon_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17.7dp"
+        android:text="@string/home_giftcon_title"
+        android:textColor="@color/black"
+        android:textSize="15.3sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--giftcon list-->
+
+</android.support.constraint.ConstraintLayout>

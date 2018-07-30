@@ -5,28 +5,36 @@
         <item
             android:id="@+id/header_menu_find"
             android:checked="true"
+            android:icon="@drawable/find_icon"
             android:title="@string/header_menu_find" />
         <item
             android:id="@+id/header_menu_info"
+            android:icon="@drawable/bag_icon"
             android:title="@string/header_menu_info" />
         <item
             android:id="@+id/header_menu_choice"
+            android:icon="@drawable/people_icon"
             android:title="@string/header_menu_choice" />
 
         <item
             android:id="@+id/header_menu_delivery"
+            android:icon="@drawable/truck_icon"
             android:title="@string/header_menu_delivery" />
         <item
             android:id="@+id/header_menu_message"
+            android:icon="@drawable/message"
             android:title="@string/header_menu_message" />
         <item
             android:id="@+id/header_menu_review"
+            android:icon="@drawable/review_icon"
             android:title="@string/header_menu_review" />
         <item
             android:id="@+id/header_menu_point"
+            android:icon="@drawable/coin"
             android:title="@string/header_menu_point" />
         <item
             android:id="@+id/header_menu_charge"
+            android:icon="@drawable/bank"
             android:title="@string/header_menu_charge" />
 
 

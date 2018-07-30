@@ -41,7 +41,6 @@
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:background="@color/drawer_header_background"
-        app:headerLayout="@layout/drawer_header"
         app:itemTextColor="@color/login_background"
         app:menu="@menu/header_menu" />
 
