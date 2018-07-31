@@ -32,7 +32,8 @@
 
         <activity android:name=".ui.findID.FindID" />
         <activity android:name=".ui.findPassword.FindPassword" />
-        <activity android:name=".ui.stuffinfo.StuffInformation"/>
+        <activity android:name=".ui.stuffinfo.StuffInformation" />
+        <activity android:name=".ui.stuff.Stuff" />
     </application>
 
 </manifest>

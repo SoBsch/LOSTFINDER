@@ -9,7 +9,7 @@
 
     <include
         android:id="@+id/stuff_info_header"
-        layout="@layout/stuff_header"
+        layout="@layout/stuff_info_header"
         android:layout_width="0dp"
         android:layout_height="260dp"
         app:layout_constraintBottom_toBottomOf="parent"
