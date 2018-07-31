@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="260dp"
+    android:background="@color/login_tint">
+
+    <!--<ImageButton
+        android:id="@+id/stuff_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:src="@drawable/ic_menu_black_24dp" />-->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:fontFamily="@font/basic"
+        android:text="내 물건 현황"
+        android:textColor="@color/black"
+        android:textSize="19.2dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/stuff_header_count_layer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:fontFamily="@font/basic"
+        android:text="총 갯수"
+        android:textColor="@color/white"
+        android:textSize="15.5sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/stuff_header_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/basic"
+        android:text="0"
+        android:textColor="@color/white"
+        android:textSize="92.2sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/stuff_header_count_layer"
+        tools:text="3" />
+
+    <TextView
+        android:id="@+id/stuff_header_submit"
+        android:layout_width="119.3dp"
+        android:layout_height="34.7dp"
+        android:background="@drawable/white_round"
+        android:fontFamily="@font/basic"
+        android:gravity="center"
+        android:text="등록하기"
+        android:textColor="@color/login_tint"
+        android:textStyle="bold"
+
+        app:layout_constraintEnd_toStartOf="@+id/stuff_header_mypage"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/stuff_header_count" />
+
+    <TextView
+        android:id="@+id/stuff_header_mypage"
+        android:layout_width="119.3dp"
+        android:layout_height="34.7dp"
+        android:layout_marginStart="4dp"
+        android:background="@drawable/white_round_edge"
+        android:gravity="center"
+        android:text="마이페이지"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/stuff_header_submit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/stuff_header_submit"
+        app:layout_constraintTop_toTopOf="@+id/stuff_header_submit"
+        app:layout_constraintVertical_bias="0.0" />
+
+</android.support.constraint.ConstraintLayout>
