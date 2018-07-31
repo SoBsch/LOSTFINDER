@@ -57,3 +57,5 @@
   * home 
   * message
   * mypage
+  
+  * 내 물건 현황 - StuffInformation `Activity`
