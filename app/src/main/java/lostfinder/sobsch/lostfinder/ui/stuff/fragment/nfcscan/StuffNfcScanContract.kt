@@ -1,21 +1,24 @@
-package lostfinder.sobsch.lostfinder.ui.stuff
+package lostfinder.sobsch.lostfinder.ui.stuff.fragment.nfcscan
 
+import android.content.Context
 import android.support.v4.app.FragmentManager
+import android.widget.ImageView
 import lostfinder.sobsch.lostfinder.ui.base.BasePresenter
 import lostfinder.sobsch.lostfinder.ui.base.BaseView
 
-interface StuffContract {
+
+interface StuffNfcScanContract {
 
     interface View : BaseView {
+
+        fun nfcImage(): ImageView
 
     }
 
     interface Presenter : BasePresenter<View> {
 
-        fun getSupportFragmentManager(fm: FragmentManager)
+        fun loadImage(context: Context)
 
-        fun popBackStack()
 
-        fun nfcScan()
     }
 }

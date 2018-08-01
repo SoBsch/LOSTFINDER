@@ -10,6 +10,8 @@ class Stuff : BaseFragmentActivity<StuffContract.View, StuffContract.Presenter>(
 
     override fun init() {
 
+        mPresenter.getSupportFragmentManager(supportFragmentManager)
+        mPresenter.nfcScan()
     }
 
     override fun resume() {

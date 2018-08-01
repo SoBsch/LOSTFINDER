@@ -93,4 +93,9 @@
     <string name="home_tel"><b>고객센터 010-6622-0000</b></string>
     <string name="home_accent"><b>개인정보 처리방침</b></string>
 
+    <!--stuff nfc-->
+    <string name="stuff_nfc_scan_title">물건 등록하기</string>
+    <string name="stuff_nfc_scan_content">스마트폰 뒷면에\n스티커부분을 가져다 대주세요.</string>
+    <string name="stuff_nfc_scan_submit">NFC 검색하기</string>
+
 </resources>

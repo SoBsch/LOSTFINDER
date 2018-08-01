@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/stuff_nfc_scan_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="31dp"
+        android:fontFamily="@font/basic"
+        android:letterSpacing="-0.03"
+        android:text="@string/stuff_nfc_scan_title"
+        android:textColor="@color/black"
+        android:textSize="19.2sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/stuff_nfc_scan_image"
+        android:layout_width="196.3dp"
+        android:layout_height="216.3dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/stuff_nfc_scan_title"
+        tools:src="@drawable/illust" />
+
+    <View
+        android:id="@+id/stuff_nfc_scan_view"
+        android:layout_width="0dp"
+        android:layout_height="230dp"
+        android:background="@color/login_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/stuff_nfc_scan_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:fontFamily="@font/basic"
+        android:gravity="center"
+        android:text="@string/stuff_nfc_scan_content"
+        android:textColor="@color/black"
+        android:textSize="11.3sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/stuff_nfc_scan_view" />
+
+    <TextView
+        android:id="@+id/stuff_nfc_scan_submit"
+        android:layout_width="134dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="23dp"
+        android:background="@drawable/login_round"
+        android:gravity="center"
+        android:text="@string/stuff_nfc_scan_submit"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/stuff_nfc_scan_content"
+        app:layout_constraintStart_toStartOf="@id/stuff_nfc_scan_content"
+        app:layout_constraintTop_toBottomOf="@id/stuff_nfc_scan_content" />
+
+
+</android.support.constraint.ConstraintLayout>
