@@ -19,7 +19,7 @@ class StuffNfcScan : BaseFragment<StuffNfcScanContract.View, StuffNfcScanContrac
         mPresenter.loadImage(context!!)
 
         // nfc click
-        stuff_nfc_scan_submit.setOnClickListener { }
+        stuff_nfc_scan_submit.setOnClickListener { mPresenter.nfcSuccess(context!!) }
 
     }
 
