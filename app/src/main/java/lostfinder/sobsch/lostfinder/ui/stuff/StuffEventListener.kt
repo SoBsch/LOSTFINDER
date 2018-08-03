@@ -6,5 +6,7 @@ interface StuffEventListener {
 
     fun onWrite()
 
+    fun onSubmit()
     fun onBack()
+
 }

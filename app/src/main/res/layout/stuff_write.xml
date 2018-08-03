@@ -7,7 +7,241 @@
     android:background="@color/white"
     tools:context=".ui.stuff.fragment.write.StuffWrite">
 
+    <View
+        android:id="@+id/stuff_write_background"
+        android:layout_width="0dp"
+        android:layout_height="210dp"
+        android:background="@color/login_tint"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0" />
 
+    <TextView
+        android:id="@+id/stuff_write_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/basic"
+        android:text="@string/stuff_write_title"
+        android:textColor="@color/black"
+        android:textSize="19.2sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/stuff_write_image"
+        android:layout_width="192dp"
+        android:layout_height="192dp"
+        android:layout_marginTop="25dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="@id/stuff_write_title"
+        app:layout_constraintStart_toStartOf="@id/stuff_write_title"
+        app:layout_constraintTop_toBottomOf="@id/stuff_write_title"
+        tools:background="@drawable/stuff_write_different_image" />
+
+    <TextView
+        android:id="@+id/stuff_write_name_layer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="13.3dp"
+        android:fontFamily="@font/basic"
+        android:letterSpacing="0.05"
+        android:lineSpacingExtra="23.2sp"
+        android:text="@string/stuff_write_name_layer"
+        android:textColor="@color/black"
+        android:textSize="9.3sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/stuff_write_image"
+        app:layout_constraintTop_toBottomOf="@id/stuff_write_image" />
+
+
+    <EditText
+        android:id="@+id/stuff_write_name"
+        android:layout_width="175dp"
+        android:layout_height="35dp"
+        android:backgroundTint="@color/login_tint"
+        android:fontFamily="@font/basic"
+        android:hint="@string/stuff_write_name"
+        android:textColor="#80000000"
+        android:textSize="9.3sp"
+        app:layout_constraintEnd_toEndOf="@id/stuff_write_image"
+        app:layout_constraintStart_toStartOf="@id/stuff_write_image"
+        app:layout_constraintTop_toBottomOf="@id/stuff_write_name_layer" />
+
+
+    <TextView
+        android:id="@+id/stuff_write_division_layer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/basic"
+        android:letterSpacing="0.05"
+        android:lineSpacingExtra="23.2sp"
+        android:text="@string/stuff_write_division_layer"
+        android:textColor="@color/black"
+        android:textSize="9.3sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/stuff_write_image"
+        app:layout_constraintTop_toBottomOf="@id/stuff_write_name" />
+
+    <CheckBox
+        android:id="@+id/stuff_write_division_bag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:button="@drawable/accent_checkbox"
+        android:fontFamily="@font/basic"
+        android:letterSpacing="0.05"
+        android:paddingStart="9.3dp"
+        android:text="@string/stuff_write_division_bag"
+        android:textColor="#cc000000"
+        android:textSize="9.3sp"
+        app:layout_constraintStart_toStartOf="@id/stuff_write_division_layer"
+        app:layout_constraintTop_toBottomOf="@id/stuff_write_division_layer" />
+
+    <CheckBox
+        android:id="@+id/stuff_write_division_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:button="@drawable/accent_checkbox"
+        android:fontFamily="@font/basic"
+        android:letterSpacing="0.05"
+        android:paddingStart="9.3dp"
+        android:text="@string/stuff_write_division_phone"
+        android:textColor="#cc000000"
+        android:textSize="9.3sp"
+        app:layout_constraintBottom_toBottomOf="@id/stuff_write_division_bag"
+        app:layout_constraintStart_toEndOf="@id/stuff_write_division_bag"
+        app:layout_constraintTop_toTopOf="@id/stuff_write_division_bag" />
+
+    <CheckBox
+        android:id="@+id/stuff_write_division_wallet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:button="@drawable/accent_checkbox"
+        android:fontFamily="@font/basic"
+        android:letterSpacing="0.05"
+        android:paddingStart="9.3dp"
+        android:text="@string/stuff_write_division_wallet"
+        android:textColor="#cc000000"
+        android:textSize="9.3sp"
+        app:layout_constraintBottom_toBottomOf="@id/stuff_write_division_phone"
+        app:layout_constraintStart_toEndOf="@id/stuff_write_division_phone"
+        app:layout_constraintTop_toTopOf="@id/stuff_write_division_phone" />
+
+    <CheckBox
+        android:id="@+id/stuff_write_division_electro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6.3dp"
+        android:button="@drawable/accent_checkbox"
+        android:fontFamily="@font/basic"
+        android:letterSpacing="0.05"
+        android:paddingStart="9.3dp"
+        android:text="@string/stuff_write_division_electro"
+        android:textColor="#cc000000"
+        android:textSize="9.3sp"
+        app:layout_constraintStart_toStartOf="@id/stuff_write_division_bag"
+        app:layout_constraintTop_toBottomOf="@id/stuff_write_division_bag" />
+
+    <CheckBox
+        android:id="@+id/stuff_write_division_etc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:button="@drawable/accent_checkbox"
+        android:fontFamily="@font/basic"
+        android:letterSpacing="0.05"
+        android:paddingStart="9.3dp"
+        android:text="@string/stuff_write_division_etc"
+        android:textColor="#cc000000"
+        android:textSize="9.3sp"
+        app:layout_constraintBottom_toBottomOf="@id/stuff_write_division_electro"
+        app:layout_constraintStart_toEndOf="@id/stuff_write_division_electro"
+        app:layout_constraintTop_toTopOf="@id/stuff_write_division_electro" />
+
+    <EditText
+        android:id="@+id/stuff_write_division_etc_text"
+        android:layout_width="50dp"
+        android:layout_height="35dp"
+        android:backgroundTint="@color/login_tint"
+        android:paddingStart="3dp"
+        android:textColor="#cc000000"
+        android:textSize="9.3sp"
+        app:layout_constraintBottom_toBottomOf="@id/stuff_write_division_etc"
+        app:layout_constraintStart_toEndOf="@id/stuff_write_division_etc"
+        app:layout_constraintTop_toTopOf="@id/stuff_write_division_etc" />
+
+    <TextView
+        android:id="@+id/stuff_write_address_layer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/basic"
+        android:letterSpacing="0.05"
+        android:lineSpacingExtra="23.2sp"
+        android:text="@string/stuff_write_address_layer"
+        android:textColor="@color/black"
+        android:textSize="9.3sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/stuff_write_image"
+        app:layout_constraintTop_toBottomOf="@id/stuff_write_division_electro" />
+
+    <EditText
+        android:id="@+id/stuff_write_address"
+        android:layout_width="175dp"
+        android:layout_height="35dp"
+        android:backgroundTint="@color/login_tint"
+        android:drawableRight="@drawable/stuff_write_address_btn"
+        android:textSize="9.3sp"
+        app:layout_constraintStart_toStartOf="@id/stuff_write_address_layer"
+        app:layout_constraintTop_toBottomOf="@id/stuff_write_address_layer" />
+
+    <TextView
+        android:id="@+id/stuff_write_tel_layer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/stuff_write_tel_layer"
+        android:textColor="@color/black"
+        android:textSize="9.8sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/stuff_write_address_layer"
+        app:layout_constraintTop_toBottomOf="@id/stuff_write_address" />
+
+    <EditText
+        android:id="@+id/stuff_write_tel"
+        android:layout_width="175dp"
+        android:layout_height="35dp"
+        android:backgroundTint="@color/login_tint"
+        android:hint="@string/stuff_write_tel"
+        android:textColor="#80000000"
+        android:textSize="9.3sp"
+        app:layout_constraintStart_toStartOf="@id/stuff_write_address_layer"
+        app:layout_constraintTop_toBottomOf="@id/stuff_write_tel_layer" />
+
+    <TextView
+        android:id="@+id/stuff_write_submit"
+        android:layout_width="210dp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:text="@string/stuff_write_submit"
+        android:layout_height="34.3dp"
+        android:background="@drawable/login_round"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/stuff_write_tel" />
 
 
 </android.support.constraint.ConstraintLayout>

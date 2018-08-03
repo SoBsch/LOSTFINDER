@@ -32,6 +32,10 @@ class Stuff : BaseFragmentActivity<StuffContract.View, StuffContract.Presenter>(
 
     override fun onWrite() = mPresenter.onLoadWrite(this)
 
+    override fun onSubmit() {
+        finish()
+    }
+
     override fun onBack() {
         finish()
     }
