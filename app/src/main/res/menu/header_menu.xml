@@ -4,7 +4,6 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/header_menu_find"
-            android:checked="true"
             android:icon="@drawable/find_icon"
             android:title="@string/header_menu_find" />
         <item

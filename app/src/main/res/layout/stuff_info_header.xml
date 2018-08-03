@@ -63,7 +63,6 @@
         android:text="등록하기"
         android:textColor="@color/login_tint"
         android:textStyle="bold"
-
         app:layout_constraintEnd_toStartOf="@+id/stuff_header_mypage"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_chainStyle="packed"

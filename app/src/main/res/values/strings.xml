@@ -93,4 +93,28 @@
     <string name="home_tel"><b>고객센터 010-6622-0000</b></string>
     <string name="home_accent"><b>개인정보 처리방침</b></string>
 
+    <!--stuff nfc-->
+    <string name="stuff_nfc_scan_title">물건 등록하기</string>
+    <string name="stuff_nfc_scan_content">스마트폰 뒷면에\n스티커부분을 가져다 대주세요.</string>
+    <string name="stuff_nfc_scan_submit">NFC 검색하기</string>
+
+   <!--stuff camera-->
+    <string name="stuff_camera_title">보관 전 물건 상태 사진은 필수에요!!\n손상에 대한 전에 일어난 사고에 대한 책임\n면책하기위해 꼭 필요합니다.</string>
+
+   <!--stuff write-->
+    <string name="stuff_write_title">물건 등록하기</string>
+    <string name="stuff_write_name_layer">물건이름</string>
+    <string name="stuff_write_name">(이름)</string>
+    <string name="stuff_write_division_layer">물건분류</string>
+    <string name="stuff_write_division_bag">가방</string>
+    <string name="stuff_write_division_phone">스마트폰</string>
+    <string name="stuff_write_division_wallet">지갑</string>
+    <string name="stuff_write_division_electro">전자기기</string>
+    <string name="stuff_write_division_etc">기타</string>
+    <string name="stuff_write_address_layer">주소지</string>
+    <string name="stuff_write_address_btn">주소찾기</string>
+    <string name="stuff_write_tel_layer">비상연락망</string>
+    <string name="stuff_write_tel">(연락처, -없이 기입)</string>
+    <string name="stuff_write_submit">물건 등록</string>
+
 </resources>

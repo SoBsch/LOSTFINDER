@@ -30,6 +30,12 @@ object ImageUtil {
             .apply(roundOptions)
             .into(imageView)
 
+    // TODO 에러 기본이미지 변경
+    fun stuffImage(imageView: ImageView, url: Int?, context: Context) = Glide.with(context)
+            .load(url)
+            .apply(roundOptions)
+            .into(imageView)
+
 
     fun clearImageView(imageView: ImageView) = imageView.setImageResource(0)
 
