@@ -16,6 +16,7 @@ class StuffWritePresenter : BasePresenterImpl<StuffWriteContract.View>(), StuffW
 
     }
 
+    // TODO 서버 업로드 구현
     override fun uploadStuff(context: Context, mCallback: StuffEventListener) {
         // is succssed
         val dialog = DialogUtils.StuffNFCDialog(context)

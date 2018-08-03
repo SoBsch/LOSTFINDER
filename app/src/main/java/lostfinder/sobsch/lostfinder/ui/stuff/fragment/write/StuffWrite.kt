@@ -16,6 +16,7 @@ class StuffWrite : BaseFragment<StuffWriteContract.View, StuffWriteContract.Pres
 
     override fun stuffImage(): ImageView = stuff_write_image
 
+    // TODO 카메라 이미지 받아오기
     override fun init() {
 
         mPresenter.loadImage(context!!, "")
