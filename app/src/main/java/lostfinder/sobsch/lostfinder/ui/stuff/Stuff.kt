@@ -28,7 +28,9 @@ class Stuff : BaseFragmentActivity<StuffContract.View, StuffContract.Presenter>(
     }
 
     /* Stuff Callback Event*/
-    override fun onCamera() = mPresenter.onLoadCamera()
+    override fun onCamera() = mPresenter.onLoadCamera(this)
+
+    override fun onWrite() = mPresenter.onLoadWrite(this)
 
     override fun onBack() {
         finish()

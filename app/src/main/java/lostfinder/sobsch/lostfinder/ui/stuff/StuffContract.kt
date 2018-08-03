@@ -1,5 +1,6 @@
 package lostfinder.sobsch.lostfinder.ui.stuff
 
+import android.app.Activity
 import android.support.v4.app.FragmentManager
 import lostfinder.sobsch.lostfinder.ui.base.BasePresenter
 import lostfinder.sobsch.lostfinder.ui.base.BaseView
@@ -18,6 +19,8 @@ interface StuffContract {
 
         fun nfcScan()
 
-        fun onLoadCamera()
+        fun onLoadCamera(activity: Activity)
+
+        fun onLoadWrite(activity: Activity)
     }
 }
