@@ -4,9 +4,12 @@ import android.widget.ImageView
 import kotlinx.android.synthetic.main.stuff_nfc_scan.*
 import lostfinder.sobsch.lostfinder.R
 import lostfinder.sobsch.lostfinder.ui.base.BaseFragment
+import lostfinder.sobsch.lostfinder.ui.stuff.StuffEventListener
 
 class StuffNfcScan : BaseFragment<StuffNfcScanContract.View, StuffNfcScanContract.Presenter>(),
         StuffNfcScanContract.View {
+
+    private lateinit var mCallback: StuffEventListener
 
     override var mPresenter: StuffNfcScanContract.Presenter = StuffNfcScanPresenter()
 
@@ -19,7 +22,9 @@ class StuffNfcScan : BaseFragment<StuffNfcScanContract.View, StuffNfcScanContrac
         mPresenter.loadImage(context!!)
 
         // nfc click
-        stuff_nfc_scan_submit.setOnClickListener { mPresenter.nfcSuccess(context!!) }
+        stuff_nfc_scan_submit.setOnClickListener {
+            mPresenter.nfcSuccess(context!!, mCallback)
+        }
 
     }
 
@@ -36,6 +41,12 @@ class StuffNfcScan : BaseFragment<StuffNfcScanContract.View, StuffNfcScanContrac
     }
 
     override fun attach() {
+
+        try {
+            mCallback = activity as StuffEventListener
+        } catch (e: ClassCastException) {
+            throw ClassCastException(activity.toString())
+        }
 
     }
 

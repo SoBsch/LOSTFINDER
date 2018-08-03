@@ -4,6 +4,7 @@ import android.content.Context
 import android.widget.ImageView
 import lostfinder.sobsch.lostfinder.ui.base.BasePresenter
 import lostfinder.sobsch.lostfinder.ui.base.BaseView
+import lostfinder.sobsch.lostfinder.ui.stuff.StuffEventListener
 
 
 interface StuffNfcScanContract {
@@ -18,6 +19,6 @@ interface StuffNfcScanContract {
 
         fun loadImage(context: Context)
 
-        fun nfcSuccess(context: Context)
+        fun nfcSuccess(context: Context, isCameraOpen: StuffEventListener)
     }
 }

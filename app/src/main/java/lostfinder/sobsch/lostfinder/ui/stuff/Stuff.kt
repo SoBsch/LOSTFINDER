@@ -3,7 +3,8 @@ package lostfinder.sobsch.lostfinder.ui.stuff
 import lostfinder.sobsch.lostfinder.R
 import lostfinder.sobsch.lostfinder.ui.base.BaseFragmentActivity
 
-class Stuff : BaseFragmentActivity<StuffContract.View, StuffContract.Presenter>(), StuffContract.View {
+class Stuff : BaseFragmentActivity<StuffContract.View, StuffContract.Presenter>(), StuffContract.View,
+        StuffEventListener {
     override var mPresenter: StuffContract.Presenter = StuffPresenter()
 
     override fun getResID(): Int = R.layout.activity_stuff
@@ -24,6 +25,13 @@ class Stuff : BaseFragmentActivity<StuffContract.View, StuffContract.Presenter>(
 
     override fun destroy() {
 
+    }
+
+    /* Stuff Callback Event*/
+    override fun onCamera() = mPresenter.onLoadCamera()
+
+    override fun onBack() {
+        finish()
     }
 
 }

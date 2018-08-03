@@ -17,5 +17,7 @@ interface StuffContract {
         fun popBackStack()
 
         fun nfcScan()
+
+        fun onLoadCamera()
     }
 }
