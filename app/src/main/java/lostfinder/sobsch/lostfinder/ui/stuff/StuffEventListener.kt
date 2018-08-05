@@ -4,7 +4,7 @@ interface StuffEventListener {
 
     fun onCamera()
 
-    fun onWrite()
+    fun onWrite(path: String)
 
     fun onSubmit()
     fun onBack()

@@ -8,6 +8,7 @@ import com.bumptech.glide.load.resource.bitmap.CenterCrop
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.bumptech.glide.request.RequestOptions
 import lostfinder.sobsch.lostfinder.R
+import java.io.File
 
 object ImageUtil {
 
@@ -31,9 +32,8 @@ object ImageUtil {
             .into(imageView)
 
     // TODO 에러 기본이미지 변경
-    fun stuffImage(imageView: ImageView, url: Int?, context: Context) = Glide.with(context)
-            .load(url)
-            .apply(roundOptions)
+    fun stuffImage(imageView: ImageView, path: String, context: Context) = Glide.with(context)
+            .load(File(path))
             .into(imageView)
 
 

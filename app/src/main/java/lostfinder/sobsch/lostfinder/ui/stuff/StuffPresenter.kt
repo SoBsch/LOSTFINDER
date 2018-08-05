@@ -1,6 +1,7 @@
 package lostfinder.sobsch.lostfinder.ui.stuff
 
 import android.app.Activity
+import android.os.Bundle
 import android.support.v4.app.FragmentManager
 import android.view.WindowManager
 import lostfinder.sobsch.lostfinder.R
@@ -37,12 +38,16 @@ class StuffPresenter : BasePresenterImpl<StuffContract.View>(), StuffContract.Pr
                 .commit()
     }
 
-    override fun onLoadWrite(activity: Activity) {
+    override fun onLoadWrite(activity: Activity, path: String) {
 
         isViewFullScreen(false, activity)
 
+        val write = StuffWrite().apply {
+            arguments = Bundle().apply { putString("path", path) }
+        }
+
         supportFragmentMananger.beginTransaction()
-                .replace(R.id.stuff_container, StuffWrite())
+                .replace(R.id.stuff_container, write)
                 .commit()
     }
 
