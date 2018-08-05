@@ -10,16 +10,17 @@ class StuffWrite : BaseFragment<StuffWriteContract.View, StuffWriteContract.Pres
 
     private lateinit var mCallback: StuffEventListener
 
+    private fun imagePath(): String = arguments!!.getString("path")
+
     override var mPresenter: StuffWriteContract.Presenter = StuffWritePresenter()
 
     override fun getResId(): Int = R.layout.stuff_write
 
     override fun stuffImage(): ImageView = stuff_write_image
 
-    // TODO 카메라 이미지 받아오기
     override fun init() {
 
-        mPresenter.loadImage(context!!, "")
+        mPresenter.loadImage(context!!, imagePath())
 
         stuff_write_submit.setOnClickListener { mPresenter.uploadStuff(context!!, mCallback) }
     }

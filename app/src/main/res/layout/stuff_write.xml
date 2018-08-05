@@ -32,16 +32,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
+    <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/stuff_write_image"
         android:layout_width="192dp"
         android:layout_height="192dp"
         android:layout_marginTop="25dp"
-        android:scaleType="fitXY"
         app:layout_constraintEnd_toEndOf="@id/stuff_write_title"
         app:layout_constraintStart_toStartOf="@id/stuff_write_title"
         app:layout_constraintTop_toBottomOf="@id/stuff_write_title"
-        tools:background="@drawable/stuff_write_different_image" />
+        tools:src="@drawable/stuff_write_different_image" />
 
     <TextView
         android:id="@+id/stuff_write_name_layer"

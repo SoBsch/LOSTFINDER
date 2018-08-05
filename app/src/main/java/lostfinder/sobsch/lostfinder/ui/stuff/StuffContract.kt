@@ -21,6 +21,6 @@ interface StuffContract {
 
         fun onLoadCamera(activity: Activity)
 
-        fun onLoadWrite(activity: Activity)
+        fun onLoadWrite(activity: Activity, path: String)
     }
 }
