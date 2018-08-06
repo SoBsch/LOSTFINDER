@@ -24,6 +24,7 @@
 * Okhttp3 `3.10.0`
 * LeakCanary `1.5.4`
 * Glide `4.7.1`
+* CircleImageView `2.2.0`
 
 ### Design Pattern
 
@@ -53,9 +54,14 @@
 * 비밀번호 찾기 - FindPassword `Activity`
   
 * 메인화면 - MainActivity `Activity` ( ViewPager, Tablayout, NavigationDrawer)
-  * `Fragment`
   * home 
   * message
   * mypage
   
-  * 내 물건 현황 - StuffInformation `Activity`
+* 내 물건 현황 - StuffInformation `Activity`
+
+* 물건 등록 - Stuff `FragmentActivity`
+  * StuffNfcScan `Fragment`
+  * StuffCamera `Fragment`
+  * StuffWrite `Fragment`
+  
