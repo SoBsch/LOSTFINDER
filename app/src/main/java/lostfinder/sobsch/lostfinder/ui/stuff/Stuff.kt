@@ -5,6 +5,7 @@ import lostfinder.sobsch.lostfinder.ui.base.BaseFragmentActivity
 
 class Stuff : BaseFragmentActivity<StuffContract.View, StuffContract.Presenter>(), StuffContract.View,
         StuffEventListener {
+
     override var mPresenter: StuffContract.Presenter = StuffPresenter()
 
     override fun getResID(): Int = R.layout.activity_stuff

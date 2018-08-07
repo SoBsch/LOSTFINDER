@@ -33,17 +33,27 @@
         </activity>
 
         <activity android:name=".ui.register.Register" />
+
         <activity android:name=".ui.accentInfo.AccentInfoActivity" />
+
         <activity
             android:name=".ui.findAddress.FindAddressActivity"
             android:windowSoftInputMode="stateAlwaysHidden" />
 
         <activity android:name=".ui.findID.FindID" />
+
         <activity android:name=".ui.findPassword.FindPassword" />
+
         <activity android:name=".ui.stuffinfo.StuffInformation" />
+
         <activity android:name=".ui.stuff.Stuff" />
+
         <activity android:name=".ui.login.Login" />
+
         <activity android:name=".ui.mypoint.MyPoint" />
+
+        <activity android:name=".ui.findstuff.FindStuff" />
+
     </application>
 
 </manifest>
