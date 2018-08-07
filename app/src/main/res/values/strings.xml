@@ -116,5 +116,6 @@
     <string name="stuff_write_tel_layer">비상연락망</string>
     <string name="stuff_write_tel">(연락처, -없이 기입)</string>
     <string name="stuff_write_submit">물건 등록</string>
+    <string name="mypoint_title">내 포인트</string>
 
 </resources>
