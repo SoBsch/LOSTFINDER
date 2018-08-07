@@ -45,7 +45,6 @@ class FindStuffPresenter : BasePresenterImpl<FindStuffContract.View>(), FindStuf
                 .commit()
     }
 
-
     private fun isViewFullScreen(isFull: Boolean, activity: Activity) {
 
         if (isFull) {
