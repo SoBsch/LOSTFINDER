@@ -19,7 +19,8 @@ buildscript {
             'okhttp' : '3.10.0',
             'leakcanary' : '1.5.4',
             'glide' : '4.7.1',
-            'circleImageView' : '2.2.0'
+            'circleImageView' : '2.2.0',
+            'floatingButton'    : '1.6.4'
     ]
 
     ext.deps = [
@@ -45,7 +46,8 @@ buildscript {
             leakcanary_release : "com.squareup.leakcanary:leakcanary-android-no-op:${versions.leakcanary}",
             glide: "com.github.bumptech.glide:glide:${versions.glide}",
             glide_compiler : "com.github.bumptech.glide:compiler:${versions.glide}",
-            circleImageView: "de.hdodenhof:circleimageview:${versions.circleImageView}"
+            circleImageView: "de.hdodenhof:circleimageview:${versions.circleImageView}",
+            floatingButton: "com.github.clans:fab:${versions.floatingButton}"
 
     ]
 
