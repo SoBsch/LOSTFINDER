@@ -4,10 +4,12 @@ import android.content.Context
 import lostfinder.sobsch.lostfinder.R
 import lostfinder.sobsch.lostfinder.ui.base.BasePresenterImpl
 import lostfinder.sobsch.lostfinder.ui.stuff.StuffEventListener
+import lostfinder.sobsch.lostfinder.util.DIALOG_NFC
 import lostfinder.sobsch.lostfinder.util.DialogUtils
 import lostfinder.sobsch.lostfinder.util.ImageUtil
 
 class StuffNfcScanPresenter : BasePresenterImpl<StuffNfcScanContract.View>(), StuffNfcScanContract.Presenter {
+
 
     override fun loadImage(context: Context) {
 
@@ -16,7 +18,7 @@ class StuffNfcScanPresenter : BasePresenterImpl<StuffNfcScanContract.View>(), St
 
     // 등록 완료 됬을 시 호출
     override fun nfcSuccess(context: Context, isCameraOpen: StuffEventListener) {
-        val dialog = DialogUtils.StuffNFCDialog(context)
+        val dialog = DialogUtils.StuffNFCDialog(context, DIALOG_NFC)
 
         dialog.show()
 

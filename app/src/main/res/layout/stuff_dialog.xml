@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="254dp"
     android:layout_height="133dp"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_gravity="center"
     android:background="@color/login_tint">
 
@@ -13,10 +14,10 @@
         android:layout_marginTop="37.3dp"
         android:fontFamily="@font/basic"
         android:letterSpacing="0.1"
-        android:text="등록 완료!"
+        tools:text="@string/stuff_dialog_title_direct"
         android:textColor="@color/white"
         android:textSize="14.8sp"
-        android:textStyle="bold"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

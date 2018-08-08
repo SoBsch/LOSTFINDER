@@ -35,9 +35,7 @@ class FindStuffNFC : BaseFragment<FindStuffNFCContract.View, FindStuffNFCContrac
         mPresenter.loadImage(context!!)
 
         // nfc click
-        stuff_nfc_scan_submit.setOnClickListener {
-            mPresenter.nfcSuccess(context!!, mCallback)
-        }
+        stuff_nfc_scan_submit.setOnClickListener { mPresenter.nfcSuccess(context!!, mCallback) }
     }
 
     override fun resume() {

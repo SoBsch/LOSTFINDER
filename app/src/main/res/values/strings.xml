@@ -133,4 +133,8 @@
     <string name="stuff_mode_message_text2">대화창을 만들어 소통을 합니다.</string>
     <string name="stuff_mode_footer"><b><font color="#1b84dc">당신의 선행</font></b>으로 인해\n세상이 좀 더 밝아졌습니다.</string>
 
+    <!--stuff dialog-->
+    <string name="stuff_dialog_title_defualt"><b>등록 완료!</b></string>
+    <string name="stuff_dialog_title_direct"><b>사전 동의 메시지 전송 완료!</b>\n대화창으로 이동합니다.</string>
+
 </resources>

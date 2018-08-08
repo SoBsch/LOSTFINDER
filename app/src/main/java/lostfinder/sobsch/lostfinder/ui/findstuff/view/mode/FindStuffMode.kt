@@ -1,5 +1,6 @@
 package lostfinder.sobsch.lostfinder.ui.findstuff.view.mode
 
+import kotlinx.android.synthetic.main.stuff_mode.*
 import lostfinder.sobsch.lostfinder.R
 import lostfinder.sobsch.lostfinder.ui.base.BaseFragment
 import lostfinder.sobsch.lostfinder.ui.findstuff.FindStuffContract
@@ -23,6 +24,8 @@ class FindStuffMode : BaseFragment<FindStuffModeContract.View, FindStuffModeCont
 
     override fun init() {
 
+        stuff_mode_direct.setOnClickListener { mPresenter.openDirect(context!!, mCallback) }
+        stuff_mode_message.setOnClickListener { mPresenter.openMessage(context!!, mCallback) }
     }
 
     override fun resume() {

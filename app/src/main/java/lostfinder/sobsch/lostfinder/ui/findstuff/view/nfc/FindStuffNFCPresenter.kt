@@ -4,6 +4,7 @@ import android.content.Context
 import lostfinder.sobsch.lostfinder.R
 import lostfinder.sobsch.lostfinder.ui.base.BasePresenterImpl
 import lostfinder.sobsch.lostfinder.ui.findstuff.FindStuffContract
+import lostfinder.sobsch.lostfinder.util.DIALOG_NFC
 import lostfinder.sobsch.lostfinder.util.DialogUtils
 import lostfinder.sobsch.lostfinder.util.ImageUtil
 
@@ -21,7 +22,7 @@ class FindStuffNFCPresenter : BasePresenterImpl<FindStuffNFCContract.View>(), Fi
 
     // 등록 완료 됬을 시 호출
     override fun nfcSuccess(context: Context, isCameraOpen: FindStuffContract.FragmentCallbackListener) {
-        val dialog = DialogUtils.StuffNFCDialog(context)
+        val dialog = DialogUtils.StuffNFCDialog(context, DIALOG_NFC)
 
         dialog.show()
 
