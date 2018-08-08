@@ -14,6 +14,9 @@ class Near : BaseFragmentActivity<NearContract.View, NearContract.Presenter>(), 
         mPresenter.getSupportFragmentManager(supportFragmentManager)
         mPresenter.loadNaverMap()
 
+        // TODO 마커 추가
+        // TODO 마커 클릭 시 다이얼로그 생성 & 고객센터 지도 추가
+
     }
 
     override fun resume() {
