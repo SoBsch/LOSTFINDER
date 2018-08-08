@@ -86,4 +86,6 @@ dependencies {
     implementation deps.circleImageView
 
     implementation deps.floatingButton
+
+    implementation deps.naverMap
 }
