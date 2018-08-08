@@ -25,6 +25,7 @@
 * LeakCanary `1.5.4`
 * Glide `4.7.1`
 * CircleImageView `2.2.0`
+* 네이버 지도 `2.1.2@aar`
 
 ### Design Pattern
 
@@ -64,4 +65,12 @@
   * StuffNfcScan `Fragment`
   * StuffCamera `Fragment`
   * StuffWrite `Fragment`
+  
+* 찾아주기 - FindStuff `FragmentActivity`
+  * FindStuffNFC `Fragment`
+  * FindStuffCamera `Fragment`
+  * FindStuffMode `Fragment`
+
+* 가까운 거리 찾기 - Near `FragmentActivity`
+  * MapFragment `Fragment`
   
