@@ -4,6 +4,8 @@ import kotlinx.android.synthetic.main.stuff_mode.*
 import lostfinder.sobsch.lostfinder.R
 import lostfinder.sobsch.lostfinder.ui.base.BaseFragment
 import lostfinder.sobsch.lostfinder.ui.findstuff.FindStuffContract
+import lostfinder.sobsch.lostfinder.ui.near.Near
+import org.jetbrains.anko.intentFor
 
 class FindStuffMode : BaseFragment<FindStuffModeContract.View, FindStuffModeContract.Presenter>(), FindStuffModeContract.View {
 
@@ -26,6 +28,8 @@ class FindStuffMode : BaseFragment<FindStuffModeContract.View, FindStuffModeCont
 
         stuff_mode_direct.setOnClickListener { mPresenter.openDirect(context!!, mCallback) }
         stuff_mode_message.setOnClickListener { mPresenter.openMessage(context!!, mCallback) }
+
+        stuff_mode_near.setOnClickListener { context!!.startActivity(context!!.intentFor<Near>()) }
     }
 
     override fun resume() {
