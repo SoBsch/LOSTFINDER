@@ -1,15 +1,18 @@
 package lostfinder.sobsch.lostfinder.ui.near
 
 import lostfinder.sobsch.lostfinder.R
-import lostfinder.sobsch.lostfinder.ui.base.BaseActivity
+import lostfinder.sobsch.lostfinder.ui.base.BaseFragmentActivity
 
-class Near : BaseActivity<NearContract.View, NearContract.Presenter>(), NearContract.View {
+class Near : BaseFragmentActivity<NearContract.View, NearContract.Presenter>(), NearContract.View {
 
     override var mPresenter: NearContract.Presenter = NearPresenter()
 
     override fun getResID(): Int = R.layout.activity_near
 
     override fun init() {
+
+        mPresenter.getSupportFragmentManager(supportFragmentManager)
+        mPresenter.loadNaverMap()
 
     }
 

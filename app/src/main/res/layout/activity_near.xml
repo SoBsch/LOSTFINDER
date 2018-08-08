@@ -35,4 +35,22 @@
 
     <!--지도 추가-->
 
+    <FrameLayout
+        android:id="@+id/near_map_layer"
+        android:layout_width="270dp"
+        android:layout_height="410dp"
+        android:layout_marginTop="27dp"
+        android:background="@color/login_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/near_sub_title">
+
+        <FrameLayout
+            android:id="@+id/near_map_container"
+            android:layout_width="255dp"
+            android:layout_height="397dp"
+            android:layout_gravity="center" />
+
+    </FrameLayout>
+
 </android.support.constraint.ConstraintLayout>
