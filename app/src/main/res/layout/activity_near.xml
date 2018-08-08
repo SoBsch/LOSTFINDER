@@ -7,4 +7,32 @@
     android:background="@color/white"
     tools:context=".ui.near.Near">
 
+    <TextView
+        android:id="@+id/near_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/basic"
+        android:text="@string/near_title"
+        android:textColor="@color/black"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/near_sub_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/basic"
+        android:text="@string/near_sub_title"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@id/near_title"
+        app:layout_constraintStart_toStartOf="@id/near_title"
+        app:layout_constraintTop_toBottomOf="@id/near_title" />
+
+    <!--지도 추가-->
+
 </android.support.constraint.ConstraintLayout>
