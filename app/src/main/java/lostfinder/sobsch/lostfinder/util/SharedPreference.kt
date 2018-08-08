@@ -1,4 +1,4 @@
-package lostfinder.sobsch.lostfinder.model
+package lostfinder.sobsch.lostfinder.util
 
 import android.content.Context
 import android.content.SharedPreferences

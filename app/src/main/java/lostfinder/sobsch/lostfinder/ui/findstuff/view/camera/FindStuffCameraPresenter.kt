@@ -1,4 +1,4 @@
-package lostfinder.sobsch.lostfinder.ui.stuff.fragment.camera
+package lostfinder.sobsch.lostfinder.ui.findstuff.view.camera
 
 import android.app.Activity
 import android.content.Context
@@ -12,8 +12,8 @@ import lostfinder.sobsch.lostfinder.util.PermissionUtil
 import lostfinder.sobsch.lostfinder.util.preview.CameraPreview
 import lostfinder.sobsch.lostfinder.util.preview.CameraPreviewListener
 
-class StuffCameraPresenter : BasePresenterImpl<StuffCameraContract.View>(), StuffCameraContract.Presenter, Camera.PictureCallback,
-        CameraPreviewListener.PreviewFileListener {
+class FindStuffCameraPresenter : BasePresenterImpl<FindStuffCameraContract.View>(),
+        FindStuffCameraContract.Presenter, Camera.PictureCallback, CameraPreviewListener.PreviewFileListener {
 
     private var preview: CameraPreview? = null
 
@@ -25,7 +25,7 @@ class StuffCameraPresenter : BasePresenterImpl<StuffCameraContract.View>(), Stuf
 
         private const val CAMERA_ID = 0
 
-        fun newInstance(): StuffCameraPresenter = StuffCameraPresenter()
+        fun newInstance(): FindStuffCameraPresenter = FindStuffCameraPresenter()
 
         fun getCameraInstance(cameraId: Int): Camera? = try {
             Camera.open(cameraId)
@@ -50,9 +50,9 @@ class StuffCameraPresenter : BasePresenterImpl<StuffCameraContract.View>(), Stuf
 
     override fun initCamera(activity: Activity, context: Context) {
 
-        camera = StuffCameraPresenter.getCameraInstance(StuffCameraPresenter.CAMERA_ID)?.also { camera ->
+        camera = FindStuffCameraPresenter.getCameraInstance(FindStuffCameraPresenter.CAMERA_ID)?.also { camera ->
 
-            val cameraInfo = Camera.CameraInfo().also { Camera.getCameraInfo(StuffCameraPresenter.CAMERA_ID, it) }
+            val cameraInfo = Camera.CameraInfo().also { Camera.getCameraInfo(FindStuffCameraPresenter.CAMERA_ID, it) }
             val displayRotation = activity.windowManager?.defaultDisplay?.rotation
 
             mView!!.cameraPreview().removeAllViews()

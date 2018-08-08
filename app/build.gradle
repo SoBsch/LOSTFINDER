@@ -7,7 +7,9 @@ apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 
 android {
+
     compileSdkVersion versions.compileSdk
+
     defaultConfig {
         applicationId "lostfinder.sobsch.lostfinder"
         minSdkVersion versions.minSdk
@@ -21,6 +23,29 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+    }
+
+    splits {
+
+        density {
+
+            enable true
+
+            exclude "ldpi", "xxhdpi", "xxxhdpi"
+
+            compatibleScreens 'small', 'normal', 'large', 'xlarge'
+        }
+
+       /* abi {
+
+            enable true
+
+            reset()
+
+            include "x86", "x86_64"
+
+            universalApk false
+        }*/
     }
 }
 
@@ -61,4 +86,6 @@ dependencies {
     implementation deps.circleImageView
 
     implementation deps.floatingButton
+
+    implementation deps.naverMap
 }

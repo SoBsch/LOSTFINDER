@@ -3,7 +3,7 @@ package lostfinder.sobsch.lostfinder.util
 import android.hardware.Camera
 import android.os.Environment
 import android.provider.MediaStore
-import lostfinder.sobsch.lostfinder.ui.stuff.fragment.camera.preview.CameraPreviewListener
+import lostfinder.sobsch.lostfinder.util.preview.CameraPreviewListener
 import java.io.File
 import java.io.FileNotFoundException
 import java.io.FileOutputStream

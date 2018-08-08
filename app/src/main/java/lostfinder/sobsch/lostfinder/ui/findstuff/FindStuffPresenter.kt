@@ -1,19 +1,19 @@
-package lostfinder.sobsch.lostfinder.ui.stuff
+package lostfinder.sobsch.lostfinder.ui.findstuff
 
 import android.app.Activity
-import android.os.Bundle
 import android.support.v4.app.FragmentManager
 import lostfinder.sobsch.lostfinder.R
 import lostfinder.sobsch.lostfinder.ui.base.BasePresenterImpl
-import lostfinder.sobsch.lostfinder.ui.stuff.fragment.camera.StuffCamera
-import lostfinder.sobsch.lostfinder.ui.stuff.fragment.nfcscan.StuffNfcScan
-import lostfinder.sobsch.lostfinder.ui.stuff.fragment.write.StuffWrite
+import lostfinder.sobsch.lostfinder.ui.findstuff.view.camera.FindStuffCamera
+import lostfinder.sobsch.lostfinder.ui.findstuff.view.mode.FindStuffMode
+import lostfinder.sobsch.lostfinder.ui.findstuff.view.nfc.FindStuffNFC
 import lostfinder.sobsch.lostfinder.util.UIUtils
 
-
-class StuffPresenter : BasePresenterImpl<StuffContract.View>(), StuffContract.Presenter {
+class FindStuffPresenter : BasePresenterImpl<FindStuffContract.View>(), FindStuffContract.Presenter {
 
     private lateinit var supportFragmentMananger: FragmentManager
+
+    private val container = R.id.find_stuff_container
 
     override fun getSupportFragmentManager(fm: FragmentManager) {
         supportFragmentMananger = fm
@@ -25,7 +25,7 @@ class StuffPresenter : BasePresenterImpl<StuffContract.View>(), StuffContract.Pr
 
     override fun nfcScan() {
         supportFragmentMananger.beginTransaction()
-                .add(R.id.stuff_container, StuffNfcScan())
+                .add(container, FindStuffNFC())
                 .commit()
     }
 
@@ -34,20 +34,14 @@ class StuffPresenter : BasePresenterImpl<StuffContract.View>(), StuffContract.Pr
         UIUtils.isViewFullScreen(true, activity)
 
         supportFragmentMananger.beginTransaction()
-                .replace(R.id.stuff_container, StuffCamera())
+                .replace(container, FindStuffCamera())
                 .commit()
     }
 
-    override fun onLoadWrite(activity: Activity, path: String) {
-
-        UIUtils.isViewFullScreen(false, activity)
-
-        val write = StuffWrite().apply {
-            arguments = Bundle().apply { putString("path", path) }
-        }
+    override fun onMode() {
 
         supportFragmentMananger.beginTransaction()
-                .replace(R.id.stuff_container, write)
+                .replace(container, FindStuffMode())
                 .commit()
     }
 }

@@ -10,7 +10,7 @@ import lostfinder.sobsch.lostfinder.R
 
 object DialogUtils {
 
-    class StuffNFCDialog(context: Context) : Dialog(context) {
+    class StuffNFCDialog(context: Context, private val type: String) : Dialog(context) {
 
         override fun onCreate(savedInstanceState: Bundle?) {
             super.onCreate(savedInstanceState)
@@ -22,8 +22,16 @@ object DialogUtils {
 
         private fun init() {
 
-            stuff_dialog_submit.setOnClickListener {
-                onSuccess()
+            setText()
+
+            stuff_dialog_submit.setOnClickListener { onSuccess() }
+        }
+
+        private fun setText() {
+
+            when (type) {
+                DIALOG_NFC -> stuff_dialog_title.text = context.getString(R.string.stuff_dialog_title_defualt)
+                DIALOG_MODE -> stuff_dialog_title.text = context.getString(R.string.stuff_dialog_title_direct)
             }
         }
 

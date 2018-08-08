@@ -1,4 +1,4 @@
-package lostfinder.sobsch.lostfinder.ui.stuff.fragment.camera.preview
+package lostfinder.sobsch.lostfinder.util.preview
 
 import android.hardware.Camera
 
