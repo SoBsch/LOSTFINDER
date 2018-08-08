@@ -7,4 +7,6 @@
     android:background="@color/white"
     tools:context=".ui.chat.Chat">
 
+    <include layout="@layout/chat_header" />
+
 </android.support.constraint.ConstraintLayout>

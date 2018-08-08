@@ -137,4 +137,7 @@
     <string name="stuff_dialog_title_defualt"><b>등록 완료!</b></string>
     <string name="stuff_dialog_title_direct"><b>사전 동의 메시지 전송 완료!</b>\n대화창으로 이동합니다.</string>
 
+    <!--chat header-->
+    <string name="chat_header_title">대화창</string>
+
 </resources>
