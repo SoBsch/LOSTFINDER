@@ -7,10 +7,10 @@ import android.os.Build
 import android.support.annotation.RequiresApi
 import android.widget.Toast
 import lostfinder.sobsch.lostfinder.ui.base.BasePresenterImpl
-import lostfinder.sobsch.lostfinder.ui.stuff.fragment.camera.preview.CameraPreview
-import lostfinder.sobsch.lostfinder.ui.stuff.fragment.camera.preview.CameraPreviewListener
 import lostfinder.sobsch.lostfinder.util.CameraUtils
 import lostfinder.sobsch.lostfinder.util.PermissionUtil
+import lostfinder.sobsch.lostfinder.util.preview.CameraPreview
+import lostfinder.sobsch.lostfinder.util.preview.CameraPreviewListener
 
 class StuffCameraPresenter : BasePresenterImpl<StuffCameraContract.View>(), StuffCameraContract.Presenter, Camera.PictureCallback,
         CameraPreviewListener.PreviewFileListener {

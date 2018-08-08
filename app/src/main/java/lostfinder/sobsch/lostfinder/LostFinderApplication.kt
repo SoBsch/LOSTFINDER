@@ -2,7 +2,7 @@ package lostfinder.sobsch.lostfinder
 
 import android.app.Application
 import com.squareup.leakcanary.LeakCanary
-import lostfinder.sobsch.lostfinder.model.SharedPreference
+import lostfinder.sobsch.lostfinder.util.SharedPreference
 
 class LostFinderApplication : Application() {
 

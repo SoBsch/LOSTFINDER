@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/stuff_mode_near_container"
+    android:layout_width="270dp"
+    android:layout_height="120dp"
+    android:background="@color/login_background">
+
+    <ImageView
+        android:id="@+id/stuff_mode_near_image"
+        android:layout_width="60dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/stuff_mode_near" />
+
+    <TextView
+        android:id="@+id/stuff_mode_near_text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:fontFamily="@font/basic"
+        android:gravity="center_horizontal"
+        android:text="@string/stuff_mode_near_text1"
+        android:textColor="@color/black"
+        android:textSize="11.3sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/stuff_mode_near_image"
+        app:layout_constraintStart_toStartOf="@id/stuff_mode_near_image"
+        app:layout_constraintTop_toBottomOf="@id/stuff_mode_near_image" />
+
+    <TextView
+        android:id="@+id/stuff_mode_near_text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/basic"
+        android:gravity="left"
+        android:text="@string/sutff_mode_near_text2"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/stuff_mode_near_image"
+        app:layout_constraintTop_toTopOf="@id/stuff_mode_near_image" />
+
+
+    <TextView
+        android:id="@+id/stuff_mode_near_text3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:fontFamily="@font/basic"
+        android:gravity="left"
+        android:text="@string/stuff_mode_near_text3"
+        android:textColor="#737373"
+        android:textSize="8sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/stuff_mode_near_text2"
+        app:layout_constraintTop_toBottomOf="@id/stuff_mode_near_text2" />
+
+
+</android.support.constraint.ConstraintLayout>

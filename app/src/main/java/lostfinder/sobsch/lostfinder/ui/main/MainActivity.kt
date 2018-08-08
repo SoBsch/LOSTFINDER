@@ -12,6 +12,7 @@ import kotlinx.android.synthetic.main.main_header.*
 import lostfinder.sobsch.lostfinder.R
 import lostfinder.sobsch.lostfinder.adapter.TabLayoutPageAdapter
 import lostfinder.sobsch.lostfinder.ui.base.BaseActivity
+import lostfinder.sobsch.lostfinder.ui.findstuff.FindStuff
 import lostfinder.sobsch.lostfinder.ui.stuffinfo.StuffInformation
 import org.jetbrains.anko.intentFor
 
@@ -67,7 +68,7 @@ class MainActivity : BaseActivity<MainContract.View, MainContract.Presenter>(), 
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
 
-        item.isChecked = true
+        //item.isChecked = true
         main_drawer_layout.closeDrawers()
 
         when (item.itemId) {
@@ -112,7 +113,7 @@ class MainActivity : BaseActivity<MainContract.View, MainContract.Presenter>(), 
                 return true
             }
             R.id.action_search -> {
-
+                openFindStuff()
                 return true
             }
         }
@@ -128,5 +129,9 @@ class MainActivity : BaseActivity<MainContract.View, MainContract.Presenter>(), 
 
     override fun onTabSelected(tab: TabLayout.Tab?) {
         main_viewpager.currentItem = tab!!.position
+    }
+
+    private fun openFindStuff() {
+        startActivity(intentFor<FindStuff>())
     }
 }

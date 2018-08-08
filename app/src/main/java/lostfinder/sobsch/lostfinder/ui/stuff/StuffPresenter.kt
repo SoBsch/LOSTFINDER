@@ -3,12 +3,12 @@ package lostfinder.sobsch.lostfinder.ui.stuff
 import android.app.Activity
 import android.os.Bundle
 import android.support.v4.app.FragmentManager
-import android.view.WindowManager
 import lostfinder.sobsch.lostfinder.R
 import lostfinder.sobsch.lostfinder.ui.base.BasePresenterImpl
 import lostfinder.sobsch.lostfinder.ui.stuff.fragment.camera.StuffCamera
 import lostfinder.sobsch.lostfinder.ui.stuff.fragment.nfcscan.StuffNfcScan
 import lostfinder.sobsch.lostfinder.ui.stuff.fragment.write.StuffWrite
+import lostfinder.sobsch.lostfinder.util.UIUtils
 
 
 class StuffPresenter : BasePresenterImpl<StuffContract.View>(), StuffContract.Presenter {
@@ -31,7 +31,7 @@ class StuffPresenter : BasePresenterImpl<StuffContract.View>(), StuffContract.Pr
 
     override fun onLoadCamera(activity: Activity) {
 
-        isViewFullScreen(true, activity)
+        UIUtils.isViewFullScreen(true, activity)
 
         supportFragmentMananger.beginTransaction()
                 .replace(R.id.stuff_container, StuffCamera())
@@ -40,7 +40,7 @@ class StuffPresenter : BasePresenterImpl<StuffContract.View>(), StuffContract.Pr
 
     override fun onLoadWrite(activity: Activity, path: String) {
 
-        isViewFullScreen(false, activity)
+        UIUtils.isViewFullScreen(false, activity)
 
         val write = StuffWrite().apply {
             arguments = Bundle().apply { putString("path", path) }
@@ -49,14 +49,5 @@ class StuffPresenter : BasePresenterImpl<StuffContract.View>(), StuffContract.Pr
         supportFragmentMananger.beginTransaction()
                 .replace(R.id.stuff_container, write)
                 .commit()
-    }
-
-    private fun isViewFullScreen(isFull: Boolean, activity: Activity) {
-
-        if (isFull) {
-            activity.window.addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN)
-        } else {
-            activity.window.clearFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN)
-        }
     }
 }

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@color/white"
+    tools:context=".ui.mypoint.MyPoint">
+
+    <TextView
+        android:id="@+id/mypoint_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:fontFamily="@font/basic"
+        android:letterSpacing="-0.03"
+        android:lineSpacingExtra="-11.2sp"
+        android:text="@string/mypoint_title"
+        android:textColor="@color/black"
+        android:textSize="19.3sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/mypoint_top_image"
+        android:layout_width="78dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintEnd_toEndOf="@id/mypoint_title"
+        app:layout_constraintStart_toStartOf="@id/mypoint_title"
+        app:layout_constraintTop_toBottomOf="@id/mypoint_title"
+        tools:src="@drawable/pig_and_bank" />
+
+    <TextView
+        android:id="@+id/mypoint_point"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/basic"
+        android:letterSpacing="-0.03"
+        android:lineSpacingExtra="22.5sp"
+        android:textColor="#3f9df4"
+        android:textSize="60sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/mypoint_top_image"
+        app:layout_constraintStart_toStartOf="@id/mypoint_top_image"
+        app:layout_constraintTop_toBottomOf="@id/mypoint_top_image"
+        tools:text="16,000p" />
+
+    <TextView
+        android:id="@+id/mypoint_charge"
+        android:layout_width="119.3dp"
+        android:layout_height="34.7dp"
+        android:background="@drawable/accent_back"
+        android:fontFamily="@font/basic"
+        android:gravity="center"
+        android:text="충전하기"
+        android:textColor="@color/login_tint"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/mypoint_buy"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mypoint_point" />
+
+    <TextView
+        android:id="@+id/mypoint_buy"
+        android:layout_width="119.3dp"
+        android:layout_height="34.7dp"
+        android:layout_marginStart="4.3dp"
+        android:background="@drawable/login_round"
+        android:fontFamily="@font/basic"
+        android:gravity="center"
+        android:text="구매하기"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/mypoint_charge"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/mypoint_charge"
+        app:layout_constraintTop_toTopOf="@id/mypoint_charge" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/mypoint_recyclerview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mypoint_charge" />
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/mypoint_fab_menu"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+
+        app:menu_backgroundColor="@android:color/transparent"
+        app:menu_icon="@drawable/fab_menu"></com.github.clans.fab.FloatingActionMenu>
+
+</android.support.constraint.ConstraintLayout>

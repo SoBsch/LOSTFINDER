@@ -98,10 +98,10 @@
     <string name="stuff_nfc_scan_content">스마트폰 뒷면에\n스티커부분을 가져다 대주세요.</string>
     <string name="stuff_nfc_scan_submit">NFC 검색하기</string>
 
-   <!--stuff camera-->
+    <!--stuff camera-->
     <string name="stuff_camera_title">보관 전 물건 상태 사진은 필수에요!!\n손상에 대한 전에 일어난 사고에 대한 책임\n면책하기위해 꼭 필요합니다.</string>
 
-   <!--stuff write-->
+    <!--stuff write-->
     <string name="stuff_write_title">물건 등록하기</string>
     <string name="stuff_write_name_layer">물건이름</string>
     <string name="stuff_write_name">(이름)</string>
@@ -116,5 +116,32 @@
     <string name="stuff_write_tel_layer">비상연락망</string>
     <string name="stuff_write_tel">(연락처, -없이 기입)</string>
     <string name="stuff_write_submit">물건 등록</string>
+
+    <!--point-->
+    <string name="mypoint_title">내 포인트</string>
+
+    <!--stuff mode-->
+    <string name="stuff_mode_title">찾아주기</string>
+    <string name="stuff_mode_content">찾아줄 방법을 선택해 주세요.</string>
+    <string name="stuff_mode_direct_text1">직접주기</string>
+    <string name="stuff_mode_direct_text2">정해진 문구로만 소통을 하여\n정해진 위치에서 직접 받습니다.</string>
+    <string name="stuff_mode_direct_text3">단, 내가 습득했다는 정보를 주어\n상대방의 동의를 구해야 합니다.</string>
+    <string name="stuff_mode_near_text1">가까운 곳에\n맡기기</string>
+    <string name="sutff_mode_near_text2">현재위치를 공유하여 가까운\n센터를 선택할 수 있습니다.</string>
+    <string name="stuff_mode_near_text3">센터지도까지 위치를 알려줍니다.</string>
+    <string name="stuff_mode_message_text1">대화창\n만들기</string>
+    <string name="stuff_mode_message_text2">대화창을 만들어 소통을 합니다.</string>
+    <string name="stuff_mode_footer"><b><font color="#1b84dc">당신의 선행</font></b>으로 인해\n세상이 좀 더 밝아졌습니다.</string>
+
+    <!--stuff dialog-->
+    <string name="stuff_dialog_title_defualt"><b>등록 완료!</b></string>
+    <string name="stuff_dialog_title_direct"><b>사전 동의 메시지 전송 완료!</b>\n대화창으로 이동합니다.</string>
+
+    <!--chat header-->
+    <string name="chat_header_title">대화창</string>
+
+    <!--near-->
+    <string name="near_title">가까운 곳에 맡기기</string>
+    <string name="near_sub_title">가까운 센터 찾기</string>
 
 </resources>
