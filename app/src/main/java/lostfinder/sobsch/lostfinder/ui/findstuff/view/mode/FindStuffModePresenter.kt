@@ -3,7 +3,7 @@ package lostfinder.sobsch.lostfinder.ui.findstuff.view.mode
 import android.content.Context
 import lostfinder.sobsch.lostfinder.ui.base.BasePresenterImpl
 import lostfinder.sobsch.lostfinder.ui.findstuff.FindStuffContract
-import lostfinder.sobsch.lostfinder.util.DIALOG_NFC
+import lostfinder.sobsch.lostfinder.util.DIALOG_MODE
 import lostfinder.sobsch.lostfinder.util.DialogUtils
 
 class FindStuffModePresenter : BasePresenterImpl<FindStuffModeContract.View>(), FindStuffModeContract.Presenter {
@@ -18,9 +18,9 @@ class FindStuffModePresenter : BasePresenterImpl<FindStuffModeContract.View>(), 
 
     private fun openDialog(context: Context, action: Unit) {
 
-        val dialog = DialogUtils.StuffNFCDialog(context, DIALOG_NFC)
+        val dialog = DialogUtils.StuffNFCDialog(context, DIALOG_MODE)
 
         dialog.show()
-        dialog.setOnDismissListener {  }
+        dialog.setOnDismissListener { }
     }
 }

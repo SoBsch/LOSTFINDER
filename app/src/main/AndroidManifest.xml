@@ -54,6 +54,8 @@
 
         <activity android:name=".ui.findstuff.FindStuff" />
 
+        <activity android:name=".ui.chat.Chat" />
+
     </application>
 
 </manifest>
