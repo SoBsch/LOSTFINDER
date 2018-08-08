@@ -36,7 +36,7 @@ android {
             compatibleScreens 'small', 'normal', 'large', 'xlarge'
         }
 
-        abi {
+       /* abi {
 
             enable true
 
@@ -45,7 +45,7 @@ android {
             include "x86", "x86_64"
 
             universalApk false
-        }
+        }*/
     }
 }
 
