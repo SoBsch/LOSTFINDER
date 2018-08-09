@@ -1,5 +1,6 @@
 package lostfinder.sobsch.lostfinder.ui.register.fragment.signin
 
+import android.support.design.widget.TextInputEditText
 import android.text.Editable
 import android.text.TextWatcher
 import kotlinx.android.synthetic.main.register_signin_user.*
@@ -17,6 +18,12 @@ class RegisterSignInUser : BaseFragment<RegisterSignInUserContract.View, Registe
 
     override fun getResId(): Int = R.layout.register_signin_user
 
+    override fun userId(): TextInputEditText = register_signin_user_id
+
+    override fun userPassword(): TextInputEditText = register_signin_user_password
+
+    override fun userCheckPassword(): TextInputEditText = register_signin_user_check_password
+
     override fun attach() {
 
         try {
@@ -28,7 +35,8 @@ class RegisterSignInUser : BaseFragment<RegisterSignInUserContract.View, Registe
 
     override fun init() {
 
-        register_signin_submit.setOnClickListener { mCallback.onSignInAddress() }
+        register_signin_submit.setOnClickListener { mPresenter.submitSignIn(mCallback, context!!) }
+
         register_signin_back.setOnClickListener { mCallback.popBack() }
 
         // TODO 아이디 변경될때마다 서버에서 유효값 체크 & 비밀번호 자리수, 두개가 값이 맞는지
@@ -56,7 +64,7 @@ class RegisterSignInUser : BaseFragment<RegisterSignInUserContract.View, Registe
     }
 
     override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-
+        mPresenter.validateUserId()
     }
 
 
