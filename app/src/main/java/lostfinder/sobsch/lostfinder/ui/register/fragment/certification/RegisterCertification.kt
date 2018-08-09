@@ -1,5 +1,6 @@
 package lostfinder.sobsch.lostfinder.ui.register.fragment.certification
 
+import android.widget.Toast
 import kotlinx.android.synthetic.main.register_certification.*
 import lostfinder.sobsch.lostfinder.R
 import lostfinder.sobsch.lostfinder.ui.base.BaseFragment
@@ -25,7 +26,8 @@ class RegisterCertification : BaseFragment<RegisterCertificationContract.View, R
 
     override fun init() {
 
-        register_certification_submit.setOnClickListener { mCallback.onSignInUser() }
+        register_certification_submit.setOnClickListener { submitCertification() }
+
         register_certification_back.setOnClickListener { mCallback.popBack() }
     }
 
@@ -39,5 +41,14 @@ class RegisterCertification : BaseFragment<RegisterCertificationContract.View, R
     override fun stop() {
     }
 
+    override fun toastMessage(msg: String) = Toast.makeText(context!!, msg, Toast.LENGTH_SHORT).show()
+
+    private fun submitCertification() {
+
+        val name = register_certification_name.text.toString()
+        val phoneNumber = register_certification_tel.text.toString()
+
+        if (mPresenter.checkNotEmptyEditText(name, phoneNumber)) mCallback.onSignInUser()
+    }
 
 }
