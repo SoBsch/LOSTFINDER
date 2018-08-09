@@ -51,7 +51,7 @@ class Register : BaseFragmentActivity<RegisterContract.View, RegisterContract.Pr
         finish()
     }
 
-    override fun popBack() = mPresenter.popBackStack()
+    override fun popBack() = mPresenter.popBackStack(this)
 
 
 }
