@@ -71,10 +71,11 @@
         android:letterSpacing="-0.03"
         android:lineSpacingExtra="8.5sp"
         android:text="@string/register_main_service_intro"
-        android:textColor="#000000"
+        android:textColor="@color/black"
         android:textSize="10.3sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/register_main_sericecenter"
+        app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/register_main_submit" />
 
@@ -82,17 +83,17 @@
         android:id="@+id/register_main_sericecenter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginStart="12dp"
         android:fontFamily="@font/basic"
         android:gravity="center_horizontal"
         android:letterSpacing="-0.03"
         android:text="@string/register_main_service_center"
-        android:textColor="#000000"
+        android:textColor="@color/black"
         android:textSize="10.3sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/register_main_serviceintro"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/register_main_serviceintro"
-        app:layout_constraintTop_toBottomOf="@id/register_main_submit" />
+        app:layout_constraintTop_toTopOf="@id/register_main_serviceintro" />
 
 
 </android.support.constraint.ConstraintLayout>

@@ -7,9 +7,13 @@ interface RegisterCertificationContract {
 
     interface View : BaseView {
 
+        fun toastMessage(msg: String)
+
     }
 
     interface Presenter : BasePresenter<View> {
+
+        fun checkNotEmptyEditText(name: String, number: String): Boolean
 
     }
 }

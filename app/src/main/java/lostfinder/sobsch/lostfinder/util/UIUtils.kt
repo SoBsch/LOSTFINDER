@@ -1,9 +1,11 @@
 package lostfinder.sobsch.lostfinder.util
 
 import android.app.Activity
+import android.content.Context
 import android.view.WindowManager
+import android.widget.Toast
 
-object UIUtils{
+object UIUtils {
 
     // 전체화면
     fun isViewFullScreen(isFull: Boolean, activity: Activity) {
@@ -14,4 +16,8 @@ object UIUtils{
             activity.window.clearFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN)
         }
     }
+
+    // toast
+    fun toastMessage(message: String, context: Context) =
+            Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
 }

@@ -20,7 +20,7 @@ interface RegisterContract {
 
         fun getSupportFragmentManager(fm: FragmentManager)
 
-        fun popBackStack()
+        fun popBackStack(context: Context)
 
         fun mainFragment()  // 첫 화면
         fun accentFragment() // 약관 동의 화면
