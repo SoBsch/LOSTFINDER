@@ -36,6 +36,11 @@
             android:icon="@drawable/bank"
             android:title="@string/header_menu_charge" />
 
+        <item
+            android:id="@+id/header_menu_intro"
+            android:icon="@drawable/bank"
+            android:title="서비스 소개" />
+
 
     </group>
 </menu>
