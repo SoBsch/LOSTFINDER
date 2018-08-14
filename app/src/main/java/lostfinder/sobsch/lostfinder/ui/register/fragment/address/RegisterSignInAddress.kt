@@ -1,5 +1,6 @@
 package lostfinder.sobsch.lostfinder.ui.register.fragment.address
 
+import android.widget.EditText
 import kotlinx.android.synthetic.main.register_signin_address.*
 import lostfinder.sobsch.lostfinder.R
 import lostfinder.sobsch.lostfinder.ui.base.BaseFragment
@@ -16,6 +17,14 @@ class RegisterSignInAddress : BaseFragment<RegisterSignInAddressContract.View, R
 
     override fun getResId(): Int = R.layout.register_signin_address
 
+    override fun nickname(): EditText = register_signin_address_nickname
+
+    override fun email(): EditText = register_signin_address_email
+
+    override fun address(): EditText = register_signin_address_address
+
+    override fun otherAddress(): EditText = register_signin_other_address
+
     override fun attach() {
 
         try {
@@ -23,13 +32,14 @@ class RegisterSignInAddress : BaseFragment<RegisterSignInAddressContract.View, R
         } catch (e: ClassCastException) {
             throw ClassCastException(activity.toString())
         }
-
     }
 
     override fun init() {
 
         register_signin_address_find.setOnClickListener { context?.startActivity(intentFor<FindAddressActivity>()) }
-        register_signin_address_submit.setOnClickListener { mCallback.onRegisterDone() }
+
+        register_signin_address_submit.setOnClickListener { mPresenter.submitAddress(mCallback, context!!) }
+
         register_signin_address_back.setOnClickListener { mCallback.popBack() }
     }
 
