@@ -17,12 +17,20 @@ class RegisterPresenter : BasePresenterImpl<RegisterContract.View>(), RegisterCo
 
     private lateinit var supportFragmentMananger: FragmentManager
 
+    private var currentBackgroundColor = R.color.login_background
+
     override fun getSupportFragmentManager(fm: FragmentManager) {
         supportFragmentMananger = fm
     }
 
-    override fun popBackStack() {
+    override fun popBackStack(context: Context) {
+
         supportFragmentMananger.popBackStack()
+
+        if (currentBackgroundColor == R.color.white) {  // background color change
+            currentBackgroundColor = R.color.login_background
+            changeBackgroundColor(currentBackgroundColor, context)
+        }
     }
 
     override fun mainFragment() {
@@ -60,15 +68,20 @@ class RegisterPresenter : BasePresenterImpl<RegisterContract.View>(), RegisterCo
     }
 
     override fun doneFragment(context: Context) {
+
+        currentBackgroundColor = R.color.white
+        changeBackgroundColor(R.color.white, context)
+
         supportFragmentMananger.beginTransaction()
                 .replace(R.id.register_container, RegisterDone())
                 .addToBackStack(null)
                 .commit()
-
-        mView!!.mainContainer().setBackgroundColor(ContextCompat.getColor(context, R.color.white))
     }
 
     override fun loadImage(context: Context) {
         ImageUtil.squareDrawableImage(mView!!.logo(), R.drawable.invalid_name, context)
     }
+
+    private fun changeBackgroundColor(color: Int, context: Context) =
+            mView!!.mainContainer().setBackgroundColor(ContextCompat.getColor(context, color))
 }

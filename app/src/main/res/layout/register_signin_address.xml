@@ -82,7 +82,7 @@
         android:fontFamily="@font/basic"
         android:letterSpacing="0.05"
         android:lineSpacingExtra="23.3sp"
-        android:text="@string/password_hint"
+        android:text="@string/register_signin_address_email"
         android:textColor="#cc000000"
         android:textSize="9.3sp"
         android:textStyle="bold"
@@ -97,7 +97,7 @@
         android:fontFamily="@font/basic"
         android:hint="@string/register_signin_address_email_hint"
         android:imeOptions="actionNext"
-        android:inputType="textPassword"
+        android:inputType="textEmailAddress"
         android:textColorHint="#80000000"
         android:textSize="9.3sp"
         app:layout_constraintEnd_toStartOf="@id/address_right_base_line"
@@ -125,8 +125,7 @@
         android:layout_height="wrap_content"
         android:backgroundTint="@color/login_tint"
         android:hint="@string/register_signin_address_address_hint"
-        android:imeOptions="actionDone"
-        android:inputType="textPassword"
+        android:inputType="text"
         android:textColorHint="#80000000"
         android:textSize="9.3sp"
         app:layout_constraintStart_toStartOf="@id/register_signin_address_address_tv"
@@ -157,13 +156,11 @@
         android:fontFamily="@font/basic"
         android:hint="@string/register_signin_other_address"
         android:imeOptions="actionDone"
-        android:inputType="textPassword"
+        android:inputType="text"
         android:textColorHint="#80000000"
         android:textSize="9.3sp"
-
         app:layout_constraintStart_toStartOf="@id/register_signin_address_address"
         app:layout_constraintTop_toBottomOf="@id/register_signin_address_address" />
-
 
     <TextView
         android:id="@+id/register_signin_address_submit"
