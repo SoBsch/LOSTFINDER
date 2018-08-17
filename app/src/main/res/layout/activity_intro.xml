@@ -1,0 +1,661 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:scrollbars="none"
+    tools:context=".ui.intro.Intro">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null">
+
+
+        <ImageView
+            android:id="@+id/intro_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/intro_logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/intro_service_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="@null"
+            app:layout_constraintEnd_toStartOf="@id/intro_platform_btn"
+            app:layout_constraintStart_toStartOf="@id/intro_logo"
+            app:layout_constraintTop_toBottomOf="@id/intro_logo">
+
+            <ImageView
+                android:id="@+id/intro_service_btn_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/intro_top_btn_white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/intro_service_btn_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/basic"
+                android:text="서비스 소개"
+                android:textColor="@color/black"
+                android:textSize="6sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/intro_service_btn_image" />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/intro_platform_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            app:layout_constraintBottom_toBottomOf="@+id/intro_service_btn"
+            app:layout_constraintEnd_toStartOf="@id/intro_solution_btn"
+            app:layout_constraintStart_toEndOf="@id/intro_service_btn"
+            app:layout_constraintTop_toTopOf="@+id/intro_service_btn"
+            tools:layout_editor_absoluteX="61dp">
+
+            <ImageView
+                android:id="@+id/intro_platform_btn_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/intro_top_btn_blue"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/intro_platform_btn_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/basic"
+                android:text="플랫폼 소개"
+                android:textColor="@color/black"
+                android:textSize="6sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/intro_platform_btn_image" />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/intro_solution_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            app:layout_constraintBottom_toBottomOf="@+id/intro_platform_btn"
+            app:layout_constraintEnd_toEndOf="@id/intro_logo"
+            app:layout_constraintStart_toEndOf="@+id/intro_platform_btn"
+            app:layout_constraintTop_toTopOf="@+id/intro_platform_btn">
+
+            <ImageView
+                android:id="@+id/intro_solution_btn_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/intro_top_btn_white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/intro_solution_btn_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/basic"
+                android:text="서비스 소개"
+                android:textColor="@color/black"
+                android:textSize="6sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/intro_solution_btn_image" />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <!-- android: src 나중에 변경 gif 들어가야댐-->
+        <ImageView
+            android:id="@+id/intro_top_gif"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/intro_top_gif_img"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/intro_service_btn" />
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/intro_middle_layer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="#8fb8dc"
+            android:paddingBottom="42dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/intro_top_gif">
+
+            <ImageView
+                android:id="@+id/intro_middle_show_me"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/intro_middle_show_me"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/intro_middle_mid_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/intro_middle_mid_img"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/intro_middle_show_me" />
+
+            <TextView
+                android:id="@+id/intro_middle_text_top"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/basic"
+                android:gravity="center_horizontal"
+                android:lineSpacingExtra="3.3sp"
+                android:text="@string/intro_middle_text_top"
+                android:textColor="#0c518d"
+                android:textSize="7sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/intro_middle_mid_img" />
+
+            <ImageView
+                android:id="@+id/intro_middle_text_line"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/intro_middle_text_line"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/intro_middle_text_top" />
+
+            <TextView
+                android:id="@+id/intro_middle_text_bottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/basic"
+                android:gravity="center_horizontal"
+                android:letterSpacing="0.01"
+                android:lineSpacingExtra="4sp"
+                android:text="@string/intro_middle_text_bottom"
+                android:textColor="@color/black"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/intro_middle_text_line" />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="44dp"
+            android:src="@drawable/intro_car"
+            app:layout_constraintBottom_toBottomOf="@id/intro_middle_layer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/intro_middle_layer" />
+
+        <ImageView
+            android:id="@+id/intro_step2_top_iamge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="49dp"
+            android:src="@drawable/intro_step2_top"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/intro_middle_layer" />
+
+        <ImageView
+            android:id="@+id/intro_step2_content_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:src="@drawable/intro_step2_content_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/intro_step2_top_iamge" />
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/intro_platform_layer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="47dp"
+            android:background="@color/login_background"
+            android:paddingBottom="47dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/intro_step2_content_image">
+
+            <ImageView
+                android:id="@+id/intro_platform_top"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="47dp"
+                android:src="@drawable/intro_platform_top"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/intro_platform_nfc_service"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="41dp"
+                android:src="@drawable/intro_platform_nfc_service"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/intro_platform_top" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="81dp"
+                android:src="@drawable/intro_plat_form_item"
+                app:layout_constraintEnd_toEndOf="@+id/intro_platform_nfc_service"
+                app:layout_constraintStart_toStartOf="@+id/intro_platform_nfc_service"
+                app:layout_constraintTop_toBottomOf="@id/intro_platform_top" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:layout_marginTop="33dp"
+                android:src="@drawable/intro_platformspeech_bubble"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/intro_platform_top" />
+
+            <TextView
+                android:id="@+id/intro_platform_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/basic"
+                android:gravity="center_horizontal"
+                android:letterSpacing="0.01"
+                android:text="@string/intro_platform_content"
+                android:textColor="@color/black"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/intro_platform_nfc_service" />
+
+            <ImageView
+                android:id="@+id/intro_platform_content_line"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="23dp"
+                android:src="@drawable/intro_platform_content_line"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/intro_platform_content" />
+
+            <!-- youtube ? -->
+
+            <View
+                android:layout_width="245dp"
+                android:layout_height="138.3dp"
+                android:layout_marginTop="23dp"
+                android:background="#6e6e6e"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/intro_platform_content_line" />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/intro_solution_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="47.7dp"
+            android:gravity="center_horizontal"
+            android:letterSpacing="0.05"
+            android:lineSpacingExtra="5.2sp"
+            android:text="주요 솔루션 소개"
+            android:textColor="@color/black"
+            android:textSize="19.5sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/intro_platform_layer" />
+
+        <ImageView
+            android:id="@+id/intro_solution_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:src="@drawable/pig_and_bank"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/intro_solution_title" />
+
+        <ImageView
+            android:id="@+id/intro_solution_content_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="19.7dp"
+            android:src="@drawable/intro_solution_content_top"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/intro_solution_image" />
+
+        <ImageView
+            android:id="@+id/intro_solution_content_center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13.3dp"
+            android:src="@drawable/intro_solution_content_center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/intro_solution_content_top" />
+
+        <View
+            android:id="@+id/intro_platform_line"
+            android:layout_width="189dp"
+            android:layout_height="0.7dp"
+            android:layout_marginTop="20dp"
+            android:background="#5e5e5e"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/intro_solution_content_center" />
+
+        <TextView
+            android:id="@+id/intro_platform_point"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/basic"
+            android:gravity="center_horizontal"
+            android:letterSpacing="0.05"
+            android:lineSpacingExtra="3sp"
+            android:text="포인트 적립기준"
+            android:textColor="#1b85dd"
+            android:textSize="11.3sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/intro_platform_line" />
+
+        <TextView
+            android:id="@+id/intro_platform_point_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/basic"
+            android:gravity="center_horizontal"
+            android:letterSpacing="-0.03"
+            android:lineSpacingExtra="2sp"
+            android:text="@string/intro_platform_point_content"
+            android:textColor="@color/black"
+            android:textSize="7.7sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/intro_platform_point" />
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/intro_stuff_submit"
+            android:layout_width="0dp"
+            android:layout_height="50.7dp"
+            android:layout_marginTop="32dp"
+            android:background="#1b85dd"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/intro_platform_point_content">
+
+            <ImageView
+                android:id="@+id/intro_stuff_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="92dp"
+                android:src="@drawable/intro_stuff_go"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8.3dp"
+                android:fontFamily="@font/basic"
+                android:text="@string/intro_stuff_text"
+                android:textColor="@color/white"
+                android:textSize="14.3sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/intro_stuff_image"
+                app:layout_constraintStart_toEndOf="@id/intro_stuff_image"
+                app:layout_constraintTop_toTopOf="@id/intro_stuff_image" />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/intro_event"
+            android:layout_width="0dp"
+            android:layout_height="71.3dp"
+            android:background="#3a3a3a"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/intro_stuff_submit">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/basic"
+                android:gravity="center_horizontal"
+                android:letterSpacing="-0.03"
+                android:lineSpacingExtra="0sp"
+                android:text="@string/intro_event"
+                android:textColor="@color/white"
+                android:textSize="14.3sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/intro_footer_layer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="#dbdbdb"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/intro_event">
+
+            <TextView
+                android:id="@+id/intro_footer_notice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="27.3dp"
+                android:fontFamily="@font/basic"
+                android:text="@string/intro_footer_notice"
+                android:textColor="@color/black"
+                android:textSize="12.5sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/intro_footer_faq"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/intro_footer_faq"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="35dp"
+                android:fontFamily="@font/basic"
+                android:text="@string/intro_footer_faq"
+                android:textColor="@color/black"
+                android:textSize="12.5sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/intro_footer_ca"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/intro_footer_notice"
+                app:layout_constraintTop_toTopOf="@id/intro_footer_notice" />
+
+            <TextView
+                android:id="@+id/intro_footer_ca"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="35dp"
+                android:fontFamily="@font/basic"
+                android:text="@string/intro_footer_ca"
+                android:textColor="@color/black"
+                android:textSize="12.5sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/intro_footer_faq"
+                app:layout_constraintTop_toTopOf="@id/intro_footer_faq" />
+
+            <ImageButton
+                android:id="@+id/intro_footer_facebook"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:background="@null"
+                android:src="@drawable/intro_facebook"
+                app:layout_constraintEnd_toStartOf="@+id/intro_footer_youtube"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/intro_footer_notice" />
+
+            <ImageButton
+                android:id="@+id/intro_footer_youtube"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="13dp"
+                android:background="@null"
+                android:src="@drawable/intro_youtube"
+                app:layout_constraintBottom_toBottomOf="@id/intro_footer_facebook"
+                app:layout_constraintEnd_toStartOf="@+id/intro_footer_web"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/intro_footer_facebook"
+                app:layout_constraintTop_toTopOf="@id/intro_footer_facebook" />
+
+            <ImageButton
+                android:id="@+id/intro_footer_web"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="13dp"
+                android:background="@null"
+                android:src="@drawable/intro_web"
+                app:layout_constraintBottom_toBottomOf="@id/intro_footer_youtube"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/intro_footer_youtube"
+                app:layout_constraintTop_toTopOf="@id/intro_footer_youtube" />
+
+            <TextView
+                android:id="@+id/intro_footer_certification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12.3dp"
+                android:fontFamily="@font/basic"
+                android:lineSpacingExtra="2.2sp"
+                android:text="@string/intro_footer_certification"
+                android:textColor="@color/black"
+                android:textSize="5.8sp"
+                app:layout_constraintEnd_toStartOf="@+id/intro_footer_certification_line"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/intro_footer_facebook" />
+
+            <View
+                android:id="@+id/intro_footer_certification_line"
+                android:layout_width="0.7dp"
+                android:layout_height="7dp"
+                android:layout_marginStart="5dp"
+                android:background="@color/black"
+                app:layout_constraintBottom_toBottomOf="@id/intro_footer_certification"
+                app:layout_constraintEnd_toStartOf="@+id/intro_footer_tel"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/intro_footer_certification"
+                app:layout_constraintTop_toTopOf="@id/intro_footer_certification" />
+
+            <TextView
+                android:id="@+id/intro_footer_tel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:fontFamily="@font/basic"
+                android:lineSpacingExtra="2.2sp"
+                android:text="@string/intro_footer_tel"
+                android:textColor="@color/black"
+                android:textSize="5.8sp"
+                app:layout_constraintBottom_toBottomOf="@id/intro_footer_certification_line"
+                app:layout_constraintEnd_toStartOf="@+id/intro_footer_tel_line"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/intro_footer_certification_line"
+                app:layout_constraintTop_toTopOf="@id/intro_footer_certification_line" />
+
+            <View
+                android:id="@+id/intro_footer_tel_line"
+                android:layout_width="0.7dp"
+                android:layout_height="7dp"
+                android:layout_marginStart="5dp"
+                android:background="@color/black"
+                app:layout_constraintBottom_toBottomOf="@id/intro_footer_tel"
+                app:layout_constraintEnd_toStartOf="@+id/intro_footer_secret"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/intro_footer_tel"
+                app:layout_constraintTop_toTopOf="@id/intro_footer_tel" />
+
+            <TextView
+                android:id="@+id/intro_footer_secret"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:fontFamily="@font/basic"
+                android:lineSpacingExtra="2.2sp"
+                android:text="@string/intro_footer_secret"
+                android:textColor="@color/black"
+                android:textSize="5.8sp"
+                app:layout_constraintBottom_toBottomOf="@id/intro_footer_tel_line"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/intro_footer_tel_line"
+                app:layout_constraintTop_toTopOf="@id/intro_footer_tel_line" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
+
+</ScrollView>
