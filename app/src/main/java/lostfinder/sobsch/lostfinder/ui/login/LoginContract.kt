@@ -10,11 +10,16 @@ interface LoginContract{
     interface View: BaseView{
 
         fun logo(): ImageView
+
+        fun intentMain()
+
+        fun toastMessage(message: String)
     }
 
     interface Presenter: BasePresenter<View>{
 
         fun loadImage(context: Context)
 
+        fun submitLogin(id: String, pw: String)
     }
 }
