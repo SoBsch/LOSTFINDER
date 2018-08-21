@@ -21,6 +21,8 @@ interface RegisterSignInAddressContract {
 
     interface Presenter : BasePresenter<View> {
 
+        fun setUserInfo(name: String?, phone: String?, id: String?, pw: String?)
+
         fun submitAddress(mCallback: RegisterEventListenter, context: Context)
     }
 }

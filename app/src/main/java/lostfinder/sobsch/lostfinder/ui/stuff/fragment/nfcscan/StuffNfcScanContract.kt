@@ -19,6 +19,10 @@ interface StuffNfcScanContract {
 
         fun loadImage(context: Context)
 
+        fun setNfcAdapter(context: Context)
+
+        fun isValidNFC(): Boolean
+
         fun nfcSuccess(context: Context, isCameraOpen: StuffEventListener)
     }
 }

@@ -48,7 +48,7 @@ class RegisterCertification : BaseFragment<RegisterCertificationContract.View, R
         val name = register_certification_name.text.toString()
         val phoneNumber = register_certification_tel.text.toString()
 
-        if (mPresenter.checkNotEmptyEditText(name, phoneNumber)) mCallback.onSignInUser()
+        if (mPresenter.checkNotEmptyEditText(name, phoneNumber)) mCallback.onSignInUser(name, phoneNumber)
     }
 
 }

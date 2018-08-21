@@ -1,8 +1,10 @@
 package lostfinder.sobsch.lostfinder.ui.register
 
 import android.content.Context
+import android.os.Bundle
 import android.support.v4.app.FragmentManager
 import android.support.v4.content.ContextCompat
+import android.util.Log
 import lostfinder.sobsch.lostfinder.R
 import lostfinder.sobsch.lostfinder.ui.base.BasePresenterImpl
 import lostfinder.sobsch.lostfinder.ui.register.fragment.accent.RegisterAccent
@@ -16,6 +18,11 @@ import lostfinder.sobsch.lostfinder.util.ImageUtil
 class RegisterPresenter : BasePresenterImpl<RegisterContract.View>(), RegisterContract.Presenter {
 
     private lateinit var supportFragmentMananger: FragmentManager
+
+    private var name: String? = null
+    private var phone: String? = null
+    private var userId: String? = null
+    private var userPW: String? = null
 
     private var currentBackgroundColor = R.color.login_background
 
@@ -53,16 +60,37 @@ class RegisterPresenter : BasePresenterImpl<RegisterContract.View>(), RegisterCo
                 .commit()
     }
 
-    override fun signinUserFragment() {
+    override fun signinUserFragment(name: String?, phone: String?) {
+
+        if (name?.isNotEmpty()!! && phone?.isNotEmpty()!!) {
+            this.name = name
+            this.phone = phone
+        }
+        Log.e("name & phone", "${this.name}  ${this.phone}")
         supportFragmentMananger.beginTransaction()
                 .replace(R.id.register_container, RegisterSignInUser())
                 .addToBackStack(null)
                 .commit()
     }
 
-    override fun signinAddressFragment() {
+    override fun signinAddressFragment(id: String, pw: String) {
+
+        this.userId = id
+        this.userPW = pw
+
+        Log.e("id, pw", "$userId   $userPW")
+
+        val registerAddress = RegisterSignInAddress().apply {
+            arguments = Bundle().apply {
+                putString("name", name)
+                putString("phone", phone)
+                putString("id", userId)
+                putString("pw", userPW)
+            }
+        }
+
         supportFragmentMananger.beginTransaction()
-                .replace(R.id.register_container, RegisterSignInAddress())
+                .replace(R.id.register_container, registerAddress)
                 .addToBackStack(null)
                 .commit()
     }
