@@ -1,6 +1,7 @@
 package lostfinder.sobsch.lostfinder.ui.register
 
 import android.content.Context
+import android.os.Bundle
 import android.support.v4.app.FragmentManager
 import android.support.v4.content.ContextCompat
 import android.util.Log
@@ -79,8 +80,17 @@ class RegisterPresenter : BasePresenterImpl<RegisterContract.View>(), RegisterCo
 
         Log.e("id, pw", "$userId   $userPW")
 
+        val registerAddress = RegisterSignInAddress().apply {
+            arguments = Bundle().apply {
+                putString("name", name)
+                putString("phone", phone)
+                putString("id", userId)
+                putString("pw", userPW)
+            }
+        }
+
         supportFragmentMananger.beginTransaction()
-                .replace(R.id.register_container, RegisterSignInAddress())
+                .replace(R.id.register_container, registerAddress)
                 .addToBackStack(null)
                 .commit()
     }

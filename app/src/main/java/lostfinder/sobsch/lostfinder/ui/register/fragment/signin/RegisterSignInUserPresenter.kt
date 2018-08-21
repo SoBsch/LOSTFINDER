@@ -17,7 +17,6 @@ class RegisterSignInUserPresenter : BasePresenterImpl<RegisterSignInUserContract
 
     override fun submitSignIn(mCallback: RegisterEventListenter, context: Context) {
 
-        Log.e("test", "${isValidId()}  $usedID")
         if (checkPassword(context) && isValidId() && usedID) {   // ! 빼야됨
 
             val id = mView!!.userId().text.toString()
