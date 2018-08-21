@@ -39,6 +39,8 @@ class RegisterSignInUser : BaseFragment<RegisterSignInUserContract.View, Registe
 
         register_signin_back.setOnClickListener { mCallback.popBack() }
 
+        register_signin_user_id.addTextChangedListener(this)
+
         // TODO 아이디 변경될때마다 서버에서 유효값 체크 & 비밀번호 자리수, 두개가 값이 맞는지
 
     }

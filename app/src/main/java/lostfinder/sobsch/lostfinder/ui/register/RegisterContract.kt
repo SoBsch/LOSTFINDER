@@ -26,7 +26,7 @@ interface RegisterContract {
         fun accentFragment() // 약관 동의 화면
         fun certificationFragment() // 본인 인증
         fun signinUserFragment(name: String?, phone: String?)    // 아이디 입력
-        fun signinAddressFragment() // 주소입력
+        fun signinAddressFragment(id: String, pw: String) // 주소입력
         fun doneFragment(context: Context)    // 완료
 
         fun loadImage(context: Context)

@@ -20,6 +20,8 @@ class RegisterPresenter : BasePresenterImpl<RegisterContract.View>(), RegisterCo
 
     private var name: String? = null
     private var phone: String? = null
+    private var userId: String? = null
+    private var userPW: String? = null
 
     private var currentBackgroundColor = R.color.login_background
 
@@ -70,7 +72,13 @@ class RegisterPresenter : BasePresenterImpl<RegisterContract.View>(), RegisterCo
                 .commit()
     }
 
-    override fun signinAddressFragment() {
+    override fun signinAddressFragment(id: String, pw: String) {
+
+        this.userId = id
+        this.userPW = pw
+
+        Log.e("id, pw", "$userId   $userPW")
+
         supportFragmentMananger.beginTransaction()
                 .replace(R.id.register_container, RegisterSignInAddress())
                 .addToBackStack(null)

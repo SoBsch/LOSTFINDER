@@ -44,7 +44,7 @@ class Register : BaseFragmentActivity<RegisterContract.View, RegisterContract.Pr
 
     override fun onSignInUser(name: String?, phone: String?) = mPresenter.signinUserFragment(name, phone)
 
-    override fun onSignInAddress() = mPresenter.signinAddressFragment()
+    override fun onSignInAddress(id: String, pw: String) = mPresenter.signinAddressFragment(id, pw)
 
     override fun onRegisterDone() = mPresenter.doneFragment(this)
 
