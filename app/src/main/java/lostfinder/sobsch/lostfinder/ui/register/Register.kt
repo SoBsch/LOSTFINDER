@@ -4,6 +4,7 @@ import android.support.constraint.ConstraintLayout
 import android.widget.ImageView
 import kotlinx.android.synthetic.main.activity_register.*
 import lostfinder.sobsch.lostfinder.R
+import lostfinder.sobsch.lostfinder.R.id.register_logo
 import lostfinder.sobsch.lostfinder.ui.base.BaseFragmentActivity
 
 class Register : BaseFragmentActivity<RegisterContract.View, RegisterContract.Presenter>(), RegisterContract.View, RegisterEventListenter {
@@ -41,7 +42,7 @@ class Register : BaseFragmentActivity<RegisterContract.View, RegisterContract.Pr
 
     override fun onCertification() = mPresenter.certificationFragment()
 
-    override fun onSignInUser() = mPresenter.signinUserFragment()
+    override fun onSignInUser(name: String?, phone: String?) = mPresenter.signinUserFragment(name, phone)
 
     override fun onSignInAddress() = mPresenter.signinAddressFragment()
 

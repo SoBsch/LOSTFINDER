@@ -3,6 +3,7 @@ package lostfinder.sobsch.lostfinder.ui.register
 import android.content.Context
 import android.support.v4.app.FragmentManager
 import android.support.v4.content.ContextCompat
+import android.util.Log
 import lostfinder.sobsch.lostfinder.R
 import lostfinder.sobsch.lostfinder.ui.base.BasePresenterImpl
 import lostfinder.sobsch.lostfinder.ui.register.fragment.accent.RegisterAccent
@@ -16,6 +17,9 @@ import lostfinder.sobsch.lostfinder.util.ImageUtil
 class RegisterPresenter : BasePresenterImpl<RegisterContract.View>(), RegisterContract.Presenter {
 
     private lateinit var supportFragmentMananger: FragmentManager
+
+    private var name: String? = null
+    private var phone: String? = null
 
     private var currentBackgroundColor = R.color.login_background
 
@@ -53,7 +57,13 @@ class RegisterPresenter : BasePresenterImpl<RegisterContract.View>(), RegisterCo
                 .commit()
     }
 
-    override fun signinUserFragment() {
+    override fun signinUserFragment(name: String?, phone: String?) {
+
+        if (name?.isNotEmpty()!! && phone?.isNotEmpty()!!) {
+            this.name = name
+            this.phone = phone
+        }
+        Log.e("name & phone", "${this.name}  ${this.phone}")
         supportFragmentMananger.beginTransaction()
                 .replace(R.id.register_container, RegisterSignInUser())
                 .addToBackStack(null)
