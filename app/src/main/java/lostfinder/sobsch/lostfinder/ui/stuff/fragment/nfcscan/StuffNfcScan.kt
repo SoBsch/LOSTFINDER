@@ -1,6 +1,8 @@
 package lostfinder.sobsch.lostfinder.ui.stuff.fragment.nfcscan
 
 import android.nfc.NfcAdapter
+import android.nfc.Tag
+import android.nfc.tech.Ndef
 import android.util.Log
 import android.widget.ImageView
 import kotlinx.android.synthetic.main.stuff_nfc_scan.*
@@ -35,16 +37,24 @@ class StuffNfcScan : BaseFragment<StuffNfcScanContract.View, StuffNfcScanContrac
     private fun test() {
         var adapter = NfcAdapter.getDefaultAdapter(context!!)
 
-        if(adapter == null){
+        if (adapter == null) {
             Log.e("nfc", "지원 안하는 단말기")
             return
-        }else{
+        } else {
             Log.e("nfc", "지원 함")
         }
 
     }
 
     override fun resume() {
+        val tag: Tag? = activity?.intent?.getParcelableExtra(NfcAdapter.EXTRA_TAG)
+
+
+        if (tag != null) {
+            val ndef = Ndef.get(tag)
+            ndef.type
+            Log.e("test", "test")
+        }
 
     }
 
