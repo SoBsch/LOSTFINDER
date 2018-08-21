@@ -1,5 +1,6 @@
 package lostfinder.sobsch.lostfinder.ui.register.fragment.address
 
+import android.util.Log
 import android.widget.EditText
 import kotlinx.android.synthetic.main.register_signin_address.*
 import lostfinder.sobsch.lostfinder.R
@@ -36,11 +37,29 @@ class RegisterSignInAddress : BaseFragment<RegisterSignInAddressContract.View, R
 
     override fun init() {
 
+        getArgument()
+
         register_signin_address_find.setOnClickListener { context?.startActivity(intentFor<FindAddressActivity>()) }
 
         register_signin_address_submit.setOnClickListener { mPresenter.submitAddress(mCallback, context!!) }
 
         register_signin_address_back.setOnClickListener { mCallback.popBack() }
+    }
+
+    private fun getArgument() {
+        if (arguments == null) {
+            return
+        }
+
+        val name = arguments?.getString("name")
+        val phone = arguments?.getString("phone")
+        val id = arguments?.getString("id")
+        val pw = arguments?.getString("pw")
+
+        mPresenter.setUserInfo(name, phone, id, pw)
+
+        Log.e("test", "$name  $phone  $id  $pw")
+
     }
 
     override fun resume() {

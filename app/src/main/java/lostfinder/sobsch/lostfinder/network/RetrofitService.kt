@@ -12,7 +12,6 @@ import retrofit2.http.*
 
 interface RetrofitService {
 
-
     // Register
     @FormUrlEncoded
     @POST("/Register.php")
@@ -24,8 +23,14 @@ interface RetrofitService {
                  @Field("tel") tel: String,
                  @Field("other_num") other_num: String): Single<ServerResult>
 
-    data class ServerResult(@SerializedName("result") val result: Boolean)
+    // Login
+    @FormUrlEncoded
+    @POST("/check.php")
+    fun login(@Field("userid") userid: String,
+              @Field("userpw") userpw: String): Single<ServerResult>
 
+
+    data class ServerResult(@SerializedName("result") val result: Boolean)
 
     companion object {
 
