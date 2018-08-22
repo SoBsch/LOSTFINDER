@@ -41,7 +41,6 @@
             android:icon="@drawable/bank"
             android:title="서비스 소개" />
 
-
     </group>
 </menu>
 
