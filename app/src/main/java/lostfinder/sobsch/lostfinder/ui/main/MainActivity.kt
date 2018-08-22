@@ -86,6 +86,9 @@ class MainActivity : BaseActivity<MainContract.View, MainContract.Presenter>(), 
         addTab(this.newTab().setText("홈"))
         addTab(this.newTab().setText("메시지"))
         addTab(this.newTab().setText("마이페이지"))
+        main_tablayout.getTabAt(0)?.setIcon(R.drawable.ic_tab_home)
+        main_tablayout.getTabAt(1)?.setIcon(R.drawable.ic_tab_message)
+        main_tablayout.getTabAt(2)?.setIcon(R.drawable.ic_tab_mypage)
         tabGravity = TabLayout.GRAVITY_FILL
         addOnTabSelectedListener(this@MainActivity)
     }
