@@ -41,8 +41,14 @@ class MainActivity : BaseActivity<MainContract.View, MainContract.Presenter>(), 
         setTabLayout()
         setViewPager()
 
-        main_navigation_intro.setOnClickListener { startActivity(intentFor<Intro>()) }
-        main_navigation_service_center.setOnClickListener { startActivity(intentFor<ServiceCenter>()) }
+        main_navigation_intro.setOnClickListener {
+            startActivity(intentFor<Intro>())
+            closeDrawer()
+        }
+        main_navigation_service_center.setOnClickListener {
+            startActivity(intentFor<ServiceCenter>())
+            closeDrawer()
+        }
     }
 
     // 네비게이션 헤터 세팅
@@ -73,7 +79,7 @@ class MainActivity : BaseActivity<MainContract.View, MainContract.Presenter>(), 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
 
         //item.isChecked = true
-        main_drawer_layout.closeDrawers()
+        closeDrawer()
 
         when (item.itemId) {
 
@@ -140,4 +146,6 @@ class MainActivity : BaseActivity<MainContract.View, MainContract.Presenter>(), 
     private fun openFindStuff() {
         startActivity(intentFor<FindStuff>())
     }
+
+    private fun closeDrawer() = main_drawer_layout.closeDrawers()
 }
