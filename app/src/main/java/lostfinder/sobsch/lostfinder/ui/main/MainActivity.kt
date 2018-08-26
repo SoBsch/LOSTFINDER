@@ -14,6 +14,7 @@ import lostfinder.sobsch.lostfinder.adapter.TabLayoutPageAdapter
 import lostfinder.sobsch.lostfinder.ui.base.BaseActivity
 import lostfinder.sobsch.lostfinder.ui.findstuff.FindStuff
 import lostfinder.sobsch.lostfinder.ui.intro.Intro
+import lostfinder.sobsch.lostfinder.ui.servicecenter.ServiceCenter
 import lostfinder.sobsch.lostfinder.ui.stuffinfo.StuffInformation
 import org.jetbrains.anko.intentFor
 
@@ -40,6 +41,14 @@ class MainActivity : BaseActivity<MainContract.View, MainContract.Presenter>(), 
         setTabLayout()
         setViewPager()
 
+        main_navigation_intro.setOnClickListener {
+            startActivity(intentFor<Intro>())
+            closeDrawer()
+        }
+        main_navigation_service_center.setOnClickListener {
+            startActivity(intentFor<ServiceCenter>())
+            closeDrawer()
+        }
     }
 
     // 네비게이션 헤터 세팅
@@ -70,13 +79,11 @@ class MainActivity : BaseActivity<MainContract.View, MainContract.Presenter>(), 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
 
         //item.isChecked = true
-        main_drawer_layout.closeDrawers()
+        closeDrawer()
 
         when (item.itemId) {
 
             R.id.header_menu_info -> startActivity(intentFor<StuffInformation>())
-
-            R.id.header_menu_intro -> startActivity(intentFor<Intro>())
         }
         return true
     }
@@ -139,4 +146,6 @@ class MainActivity : BaseActivity<MainContract.View, MainContract.Presenter>(), 
     private fun openFindStuff() {
         startActivity(intentFor<FindStuff>())
     }
+
+    private fun closeDrawer() = main_drawer_layout.closeDrawers()
 }

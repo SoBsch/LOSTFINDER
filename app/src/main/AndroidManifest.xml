@@ -74,6 +74,9 @@
         <activity android:name=".ui.near.Near" />
 
         <activity android:name=".ui.intro.Intro" />
+        <activity android:name=".ui.servicecenter.ServiceCenter" />
+        <activity android:name=".ui.faq.FAQ" />
+        <activity android:name=".ui.consult.Consult" />
 
     </application>
 
