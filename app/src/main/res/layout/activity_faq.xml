@@ -7,5 +7,142 @@
     android:background="@color/white"
     tools:context=".ui.faq.FAQ">
 
+    <TextView
+        android:id="@+id/faq_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:fontFamily="@font/basic"
+        android:letterSpacing="-0.03"
+        android:text="FAQ"
+        android:textColor="@color/black"
+        android:textSize="19.2sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/faq_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:background="@null"
+        android:src="@drawable/ic_phone_22"
+        app:layout_constraintBottom_toBottomOf="@id/faq_title"
+        app:layout_constraintEnd_toStartOf="@id/faq_user"
+        app:layout_constraintTop_toTopOf="@id/faq_title" />
+
+    <ImageButton
+        android:id="@+id/faq_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:background="@null"
+        android:src="@drawable/ic_user_22dp"
+        app:layout_constraintBottom_toBottomOf="@id/faq_phone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/faq_phone" />
+
+    <TextView
+        android:id="@+id/faq_sub_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:fontFamily="@font/basic"
+        android:text="자주하는 질문"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/faq_title" />
+
+    <View
+        android:id="@+id/faq_line1"
+        android:layout_width="0dp"
+        android:layout_height="1.7dp"
+        android:layout_marginEnd="75dp"
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="11.3dp"
+        android:background="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/faq_sub_title" />
+
+    <TextView
+        android:id="@+id/faq_tv_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="7dp"
+        android:text="분류"
+        android:textColor="@color/black"
+        android:textSize="6.5sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/faq_line1"
+        app:layout_constraintTop_toBottomOf="@id/faq_line1" />
+
+    <TextView
+        android:id="@+id/faq_tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="85dp"
+        android:text="제목"
+        android:textColor="@color/black"
+        android:textSize="6.5sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/faq_tv_category"
+        app:layout_constraintStart_toEndOf="@id/faq_tv_category"
+        app:layout_constraintTop_toTopOf="@id/faq_tv_category" />
+
+    <View
+        android:id="@+id/faq_line2"
+        android:layout_width="0dp"
+        android:layout_height="0.7dp"
+        android:layout_marginEnd="75dp"
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="6.7dp"
+        android:background="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/faq_tv_category" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/faq_recycler_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        app:layout_constraintEnd_toEndOf="@id/faq_line2"
+        app:layout_constraintStart_toStartOf="@id/faq_line2"
+        app:layout_constraintTop_toBottomOf="@id/faq_line2" />
+
+    <ImageButton
+        android:id="@+id/faq_btn_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@null"
+        android:src="@drawable/btn_faq_more"
+        app:layout_constraintEnd_toEndOf="@id/faq_recycler_view"
+        app:layout_constraintStart_toStartOf="@id/faq_recycler_view"
+        app:layout_constraintTop_toBottomOf="@id/faq_recycler_view" />
+
+    <TextView
+        android:id="@+id/faq_tv_consult"
+        android:layout_width="184dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="22dp"
+        android:background="@drawable/accent_back"
+        android:fontFamily="@font/basic"
+        android:gravity="center"
+        android:text="상담요청하기"
+        android:textColor="@color/login_tint"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/faq_btn_more" />
+
 
 </android.support.constraint.ConstraintLayout>
