@@ -34,7 +34,8 @@ class Login : BaseActivity<LoginContract.View, LoginContract.Presenter>(), Login
         login_find_id.setOnClickListener { startActivity(intentFor<FindID>()) }
         login_find_password.setOnClickListener { startActivity(intentFor<FindPassword>()) }
 
-
+        login_id.setText("0")
+        login_password.setText("0")
         login_submit.setOnClickListener { mPresenter.submitLogin(login_id.text.toString(), login_password.text.toString()) }
     }
 
