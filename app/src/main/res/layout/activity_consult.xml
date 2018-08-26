@@ -7,5 +7,230 @@
     android:background="@color/white"
     tools:context=".ui.consult.Consult">
 
+    <TextView
+        android:id="@+id/consult_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:fontFamily="@font/basic"
+        android:letterSpacing="-0.03"
+        android:text="상담요청"
+        android:textColor="@color/black"
+        android:textSize="19.2sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/consult_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:background="@null"
+        android:src="@drawable/ic_phone_22"
+        app:layout_constraintBottom_toBottomOf="@id/consult_title"
+        app:layout_constraintEnd_toStartOf="@id/consult_user"
+        app:layout_constraintTop_toTopOf="@id/consult_title" />
+
+    <ImageButton
+        android:id="@+id/consult_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:background="@null"
+        android:src="@drawable/ic_user_22dp"
+        app:layout_constraintBottom_toBottomOf="@id/consult_phone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/consult_phone" />
+
+    <TextView
+        android:id="@+id/consult_tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="91.7dp"
+        android:layout_marginTop="53dp"
+        android:text="성함"
+        android:textColor="#cc000000"
+        android:textSize="9.3sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/consult_title" />
+
+    <EditText
+        android:id="@+id/consult_et_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="88dp"
+        android:backgroundTint="@color/login_tint"
+        android:fontFamily="@font/basic"
+        android:hint="(성함)"
+        android:imeOptions="actionNext"
+        android:inputType="text"
+        android:textColor="#80000000"
+        android:textSize="9.3sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/consult_tv_name"
+        app:layout_constraintTop_toBottomOf="@id/consult_tv_name" />
+
+    <TextView
+        android:id="@+id/consult_tv_tel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="91.7dp"
+        android:layout_marginTop="13dp"
+        android:text="연락처"
+        android:textColor="#cc000000"
+        android:textSize="9.3sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/consult_et_name" />
+
+    <EditText
+        android:id="@+id/consult_et_tel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="88dp"
+        android:backgroundTint="@color/login_tint"
+        android:fontFamily="@font/basic"
+        android:hint="(-없이 기입)"
+        android:imeOptions="actionNext"
+        android:inputType="number"
+        android:textColor="#80000000"
+        android:textSize="9.3sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/consult_tv_tel"
+        app:layout_constraintTop_toBottomOf="@id/consult_tv_tel" />
+
+    <TextView
+        android:id="@+id/consult_tv_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="91.7dp"
+        android:layout_marginTop="13dp"
+        android:text="연락처"
+        android:textColor="#cc000000"
+        android:textSize="9.3sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/consult_et_tel" />
+
+    <CheckBox
+        android:id="@+id/consult_cb_delivery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8.7dp"
+        android:button="@drawable/accent_checkbox"
+        android:fontFamily="@font/basic"
+        android:paddingStart="2.7dp"
+        android:text="배송문제"
+        android:textColor="#cc000000"
+        android:textSize="9.3sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/consult_tv_category"
+        app:layout_constraintTop_toBottomOf="@id/consult_tv_category" />
+
+
+    <CheckBox
+        android:id="@+id/consult_cb_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:button="@drawable/accent_checkbox"
+        android:fontFamily="@font/basic"
+        android:paddingStart="2.7dp"
+        android:text="회원가입 / 정보이용"
+        android:textColor="#cc000000"
+        android:textSize="9.3sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/consult_cb_delivery"
+        app:layout_constraintStart_toEndOf="@id/consult_cb_delivery"
+        app:layout_constraintTop_toTopOf="@id/consult_cb_delivery" />
+
+    <CheckBox
+        android:id="@+id/consult_cb_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8.7dp"
+        android:button="@drawable/accent_checkbox"
+        android:fontFamily="@font/basic"
+        android:paddingStart="2.7dp"
+        android:text="앱 이용"
+        android:textColor="#cc000000"
+        android:textSize="9.3sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/consult_tv_category"
+        app:layout_constraintTop_toBottomOf="@id/consult_cb_delivery" />
+
+
+    <!--// TODO ______추가-->
+    <CheckBox
+        android:id="@+id/consult_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:button="@drawable/accent_checkbox"
+        android:fontFamily="@font/basic"
+        android:paddingStart="2.7dp"
+        android:text="기타"
+        android:textColor="#cc000000"
+        android:textSize="9.3sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/consult_cb_3"
+        app:layout_constraintStart_toEndOf="@id/consult_cb_3"
+        app:layout_constraintTop_toTopOf="@id/consult_cb_3" />
+
+    <TextView
+        android:id="@+id/consult_tv_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="91.7dp"
+        android:layout_marginTop="13dp"
+        android:fontFamily="@font/basic"
+        android:text="상담내용"
+        android:textColor="#cc000000"
+        android:textSize="9.3sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/consult_4" />
+
+
+    <EditText
+        android:id="@+id/consult_et_content"
+        android:layout_width="0dp"
+        android:layout_height="83dp"
+        android:layout_marginEnd="88dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="7.7dp"
+        android:background="@color/login_background"
+        android:fontFamily="@font/basic"
+        android:gravity="top"
+        android:hint="배송은 언제쯤 올까요...?"
+        android:imeOptions="actionDone"
+        android:inputType="text"
+        android:paddingStart="10dp"
+        android:paddingTop="9dp"
+        android:textColor="#cc000000"
+        android:textSize="9.3sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/consult_tv_content" />
+
+    <TextView
+        android:id="@+id/consult_tv_submit"
+        android:layout_width="184dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/accent_back"
+        android:fontFamily="@font/basic"
+        android:gravity="center"
+        android:text="상담요청하기"
+        android:textColor="@color/login_tint"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/consult_et_content" />
+
 
 </android.support.constraint.ConstraintLayout>
