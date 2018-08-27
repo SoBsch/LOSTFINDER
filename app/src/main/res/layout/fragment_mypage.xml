@@ -1,6 +1,282 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
 
-</android.support.constraint.ConstraintLayout>
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="50dp"
+        android:background="@null">
+
+        <View
+            android:id="@+id/mypage_v_layer"
+            android:layout_width="0dp"
+            android:layout_height="258dp"
+            android:background="@color/login_tint"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/mypage_tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26dp"
+            android:fontFamily="@font/basic"
+            android:gravity="center_horizontal"
+            android:letterSpacing="-0.03"
+            android:lineSpacingExtra="-13sp"
+            android:text="내 정보 관리"
+            android:textColor="@color/black"
+            android:textSize="19.2sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/mypage_iv_profile"
+            android:layout_width="74dp"
+            android:layout_height="74dp"
+            android:layout_marginTop="45dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/mypage_tv_title" />
+
+        <TextView
+            android:id="@+id/mypage_tv_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/basic"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/mypage_iv_profile"
+            app:layout_constraintStart_toStartOf="@id/mypage_iv_profile"
+            app:layout_constraintTop_toBottomOf="@id/mypage_iv_profile"
+            tools:text="ID : ~~~~" />
+
+        <EditText
+            android:id="@+id/mypage_et_accent"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:fontFamily="@font/basic"
+            android:hint="(-없이 기입)"
+            android:textColor="#80ffffff"
+            android:textColorHint="#80ffffff"
+            android:textSize="9.3sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/mypage_tv_id" />
+
+        <TextView
+            android:id="@+id/mypage_tv_nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12.3dp"
+            android:fontFamily="@font/basic"
+            android:text="닉네임"
+            android:textColor="#cc000000"
+            android:textSize="9.3sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.25"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/mypage_v_layer" />
+
+        <EditText
+            android:id="@+id/mypage_et_nickname"
+            android:layout_width="211dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/login_tint"
+            android:fontFamily="@font/basic"
+            android:hint="(10자리 이하 작성)"
+            android:textColor="#cc000000"
+            android:textColorHint="#80000000"
+            android:textSize="9.3sp"
+            app:layout_constraintStart_toStartOf="@id/mypage_tv_nickname"
+            app:layout_constraintTop_toBottomOf="@id/mypage_tv_nickname" />
+
+        <TextView
+            android:id="@+id/mypage_tv_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/basic"
+            android:text="비밀번호 변경"
+            android:textColor="#cc000000"
+            android:textSize="9.3sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/mypage_et_nickname"
+            app:layout_constraintTop_toBottomOf="@id/mypage_et_nickname" />
+
+        <EditText
+            android:id="@+id/mypage_et_password"
+            android:layout_width="105dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/login_tint"
+            android:fontFamily="@font/basic"
+            android:hint="(8자리 이상 작성)"
+            android:textColor="#cc000000"
+            android:textColorHint="#80000000"
+            android:textSize="9.3sp"
+            app:layout_constraintStart_toStartOf="@id/mypage_tv_password"
+            app:layout_constraintTop_toBottomOf="@id/mypage_tv_password" />
+
+        <TextView
+            android:id="@+id/mypage_tv_password_again"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="44.7dp"
+            android:fontFamily="@font/basic"
+            android:text="비밀번호 변경"
+            android:textColor="#cc000000"
+            android:textSize="9.3sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/mypage_tv_password"
+            app:layout_constraintTop_toBottomOf="@id/mypage_et_nickname" />
+
+        <EditText
+            android:id="@+id/mypage_et_password_again"
+            android:layout_width="105dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/login_tint"
+            android:fontFamily="@font/basic"
+            android:hint="(비밀번호 확인)"
+            android:textColor="#cc000000"
+            android:textColorHint="#80000000"
+            android:textSize="9.3sp"
+            app:layout_constraintStart_toEndOf="@id/mypage_et_password"
+            app:layout_constraintTop_toBottomOf="@id/mypage_tv_password" />
+
+        <TextView
+            android:id="@+id/mypage_tv_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/basic"
+            android:text="주소지"
+            android:textColor="#cc000000"
+            android:textSize="9.3sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.25"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/mypage_et_password" />
+
+        <EditText
+            android:id="@+id/mypage_et_address"
+            android:layout_width="211dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/login_tint"
+            android:fontFamily="@font/basic"
+            android:hint="(10자리 이하 작성)"
+            android:textColor="#cc000000"
+            android:textColorHint="#80000000"
+            android:textSize="9.3sp"
+            app:layout_constraintStart_toStartOf="@id/mypage_tv_address"
+            app:layout_constraintTop_toBottomOf="@id/mypage_tv_address" />
+
+        <TextView
+            android:id="@+id/mypage_tv_emergency_call"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/basic"
+            android:text="비상연락망"
+            android:textColor="#cc000000"
+            android:textSize="9.3sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/mypage_tv_address"
+            app:layout_constraintTop_toBottomOf="@id/mypage_et_address" />
+
+        <EditText
+            android:id="@+id/mypage_et_emergency_call"
+            android:layout_width="105dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/login_tint"
+            android:fontFamily="@font/basic"
+            android:hint="(-없이 기입)"
+            android:textColor="#cc000000"
+            android:textColorHint="#80000000"
+            android:textSize="9.3sp"
+            app:layout_constraintStart_toStartOf="@id/mypage_tv_emergency_call"
+            app:layout_constraintTop_toBottomOf="@id/mypage_tv_emergency_call" />
+
+        <TextView
+            android:id="@+id/mypage_tv_friend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="57.7dp"
+            android:fontFamily="@font/basic"
+            android:text="지인 아이디"
+            android:textColor="#cc000000"
+            android:textSize="9.3sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/mypage_tv_emergency_call"
+            app:layout_constraintTop_toBottomOf="@id/mypage_et_address" />
+
+        <EditText
+            android:id="@+id/mypage_et_friend"
+            android:layout_width="105dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/login_tint"
+            android:fontFamily="@font/basic"
+            android:hint="(지인 아이디)"
+            android:textColor="#cc000000"
+            android:textColorHint="#80000000"
+            android:textSize="9.3sp"
+            app:layout_constraintStart_toEndOf="@id/mypage_et_emergency_call"
+            app:layout_constraintTop_toBottomOf="@id/mypage_tv_emergency_call" />
+
+        <TextView
+            android:id="@+id/mypage_tv_submit"
+            android:layout_width="210.3dp"
+            android:layout_height="34.7dp"
+            android:layout_marginTop="13dp"
+            android:background="@drawable/login_round"
+            android:fontFamily="@font/basic"
+            android:gravity="center"
+            android:text="수정하기"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/mypage_et_friend" />
+
+        <TextView
+            android:id="@+id/mypage_tv_logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13dp"
+            android:fontFamily="@font/basic"
+            android:text="로그아웃"
+            android:textColor="#cc000000"
+            android:textSize="9.5sp"
+            app:layout_constraintEnd_toStartOf="@id/mypage_tv_register_out"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="@id/mypage_tv_submit"
+            app:layout_constraintTop_toBottomOf="@id/mypage_tv_submit" />
+
+        <TextView
+            android:id="@+id/mypage_tv_register_out"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="19.7dp"
+            android:fontFamily="@font/basic"
+            android:text="회원탈퇴"
+            android:textColor="#cc000000"
+            android:textSize="9.5sp"
+            app:layout_constraintBottom_toBottomOf="@id/mypage_tv_logout"
+            app:layout_constraintEnd_toEndOf="@id/mypage_tv_submit"
+            app:layout_constraintStart_toEndOf="@id/mypage_tv_logout"
+            app:layout_constraintTop_toBottomOf="@id/mypage_tv_submit"
+            app:layout_constraintTop_toTopOf="@id/mypage_tv_logout" />
+
+    </android.support.constraint.ConstraintLayout>
+
+
+</ScrollView>
