@@ -31,7 +31,7 @@
         <android.support.design.widget.TabLayout
             android:id="@+id/main_tablayout"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="66dp"
             app:tabBackground="@color/drawer_header_background"
             app:tabGravity="fill"
             app:tabIndicatorHeight="0dp"

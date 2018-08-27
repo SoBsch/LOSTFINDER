@@ -8,68 +8,77 @@
     tools:context=".ui.findAddress.FindAddressActivity">
 
 
-    <View
-        android:id="@+id/find_address_bg_line"
-        android:layout_width="0dp"
-        android:layout_height="217dp"
-        android:background="@color/login_tint"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0" />
+    <!-- <View
+         android:id="@+id/find_address_bg_line"
+         android:layout_width="0dp"
+         android:layout_height="217dp"
+         android:background="@color/login_tint"
+         app:layout_constraintBottom_toBottomOf="parent"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toTopOf="parent"
+         app:layout_constraintVertical_bias="0" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="29.7dp"
-        android:letterSpacing="-0.03"
-        android:lineSpacingExtra="-11.2sp"
-        android:text="주소찾기"
-        android:textColor="@color/white"
-        android:textSize="19.3sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+     <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="29.7dp"
+         android:letterSpacing="-0.03"
+         android:lineSpacingExtra="-11.2sp"
+         android:text="주소찾기"
+         android:textColor="@color/white"
+         android:textSize="19.3sp"
+         android:textStyle="bold"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="114.7dp"
-        android:letterSpacing="0.05"
-        android:lineSpacingExtra="26.8sp"
-        android:textColor="#000000"
-        android:textSize="8.3sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="현재위치로 설정하기" />
+     <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="114.7dp"
+         android:letterSpacing="0.05"
+         android:lineSpacingExtra="26.8sp"
+         android:textColor="#000000"
+         android:textSize="8.3sp"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toTopOf="parent"
+         tools:text="현재위치로 설정하기" />
 
-    <EditText
-        android:id="@+id/find_address"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="46dp"
-        android:layout_marginStart="50.3dp"
-        android:layout_marginTop="145.3dp"
-        android:backgroundTint="@color/white"
-        android:hint="지번, 도로명, 건물명으로 검색"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white"
-        android:textSize="13.5sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+     <EditText
+         android:id="@+id/find_address"
+         android:layout_width="0dp"
+         android:layout_height="wrap_content"
+         android:layout_marginEnd="46dp"
+         android:layout_marginStart="50.3dp"
+         android:layout_marginTop="145.3dp"
+         android:backgroundTint="@color/white"
+         android:hint="지번, 도로명, 건물명으로 검색"
+         android:textColor="@color/white"
+         android:textColorHint="@color/white"
+         android:textSize="13.5sp"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toTopOf="parent" />
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/find_address_recyclerview"
+     <android.support.v7.widget.RecyclerView
+         android:id="@+id/find_address_recyclerview"
+         android:layout_width="0dp"
+         android:layout_height="0dp"
+         android:scrollbars="none"
+         app:layout_constraintBottom_toBottomOf="parent"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toBottomOf="@id/find_address_bg_line" />-->
+
+    <WebView
+        android:id="@+id/find_address_web_view"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:scrollbars="none"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/find_address_bg_line" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

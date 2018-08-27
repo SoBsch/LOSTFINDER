@@ -1,6 +1,9 @@
 package lostfinder.sobsch.lostfinder.ui.register
 
+import android.app.Activity
+import android.content.Intent
 import android.support.constraint.ConstraintLayout
+import android.util.Log
 import android.widget.ImageView
 import kotlinx.android.synthetic.main.activity_register.*
 import lostfinder.sobsch.lostfinder.R
@@ -55,4 +58,10 @@ class Register : BaseFragmentActivity<RegisterContract.View, RegisterContract.Pr
     override fun popBack() = mPresenter.popBackStack(this)
 
 
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        if (requestCode == 3000 ) {
+            mPresenter.getCurrentFragment().onActivityResult(requestCode, resultCode, data)
+        }
+
+    }
 }
