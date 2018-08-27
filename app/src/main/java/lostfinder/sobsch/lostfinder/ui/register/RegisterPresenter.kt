@@ -2,6 +2,7 @@ package lostfinder.sobsch.lostfinder.ui.register
 
 import android.content.Context
 import android.os.Bundle
+import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager
 import android.support.v4.content.ContextCompat
 import android.util.Log
@@ -26,6 +27,10 @@ class RegisterPresenter : BasePresenterImpl<RegisterContract.View>(), RegisterCo
 
     private var currentBackgroundColor = R.color.login_background
 
+    private lateinit var currentFragment: Fragment
+
+    override fun getCurrentFragment(): Fragment = currentFragment
+
     override fun getSupportFragmentManager(fm: FragmentManager) {
         supportFragmentMananger = fm
     }
@@ -41,21 +46,30 @@ class RegisterPresenter : BasePresenterImpl<RegisterContract.View>(), RegisterCo
     }
 
     override fun mainFragment() {
+
+        currentFragment = RegisterMain()
+
         supportFragmentMananger.beginTransaction()
-                .add(R.id.register_container, RegisterMain())
+                .add(R.id.register_container, currentFragment)
                 .commit()
     }
 
     override fun accentFragment() {
+
+        currentFragment = RegisterAccent()
+
         supportFragmentMananger.beginTransaction()
-                .replace(R.id.register_container, RegisterAccent())
+                .replace(R.id.register_container, currentFragment)
                 .addToBackStack(null)
                 .commit()
     }
 
     override fun certificationFragment() {
+
+        currentFragment = RegisterCertification()
+
         supportFragmentMananger.beginTransaction()
-                .replace(R.id.register_container, RegisterCertification())
+                .replace(R.id.register_container, currentFragment)
                 .addToBackStack(null)
                 .commit()
     }
@@ -67,8 +81,11 @@ class RegisterPresenter : BasePresenterImpl<RegisterContract.View>(), RegisterCo
             this.phone = phone
         }
         Log.e("name & phone", "${this.name}  ${this.phone}")
+
+        currentFragment = RegisterSignInUser()
+
         supportFragmentMananger.beginTransaction()
-                .replace(R.id.register_container, RegisterSignInUser())
+                .replace(R.id.register_container, currentFragment)
                 .addToBackStack(null)
                 .commit()
     }
@@ -80,6 +97,7 @@ class RegisterPresenter : BasePresenterImpl<RegisterContract.View>(), RegisterCo
 
         Log.e("id, pw", "$userId   $userPW")
 
+
         val registerAddress = RegisterSignInAddress().apply {
             arguments = Bundle().apply {
                 putString("name", name)
@@ -89,8 +107,10 @@ class RegisterPresenter : BasePresenterImpl<RegisterContract.View>(), RegisterCo
             }
         }
 
+        currentFragment = registerAddress
+
         supportFragmentMananger.beginTransaction()
-                .replace(R.id.register_container, registerAddress)
+                .replace(R.id.register_container, currentFragment)
                 .addToBackStack(null)
                 .commit()
     }
@@ -100,8 +120,10 @@ class RegisterPresenter : BasePresenterImpl<RegisterContract.View>(), RegisterCo
         currentBackgroundColor = R.color.white
         changeBackgroundColor(R.color.white, context)
 
+        currentFragment = RegisterDone()
+
         supportFragmentMananger.beginTransaction()
-                .replace(R.id.register_container, RegisterDone())
+                .replace(R.id.register_container, currentFragment)
                 .addToBackStack(null)
                 .commit()
     }
