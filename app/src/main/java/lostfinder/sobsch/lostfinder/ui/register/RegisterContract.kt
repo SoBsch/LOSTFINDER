@@ -2,6 +2,7 @@ package lostfinder.sobsch.lostfinder.ui.register
 
 import android.content.Context
 import android.support.constraint.ConstraintLayout
+import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager
 import android.widget.ImageView
 import lostfinder.sobsch.lostfinder.ui.base.BasePresenter
@@ -30,6 +31,8 @@ interface RegisterContract {
         fun doneFragment(context: Context)    // 완료
 
         fun loadImage(context: Context)
+
+        fun getCurrentFragment(): Fragment
 
     }
 }

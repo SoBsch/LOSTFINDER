@@ -124,6 +124,8 @@
         android:layout_width="123.3dp"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/login_tint"
+        android:clickable="false"
+        android:focusable="false"
         android:hint="@string/register_signin_address_address_hint"
         android:inputType="text"
         android:textColorHint="#80000000"
